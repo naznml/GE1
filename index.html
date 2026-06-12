@@ -12,13 +12,12 @@
       --card: #ffffff;
       --text: #171827;
       --muted: #6b7280;
-      --primary: #7c3aed;
-      --primary-2: #4f46e5;
+      --primary: #5b5ff5;
+      --primary-2: #7c3aed;
       --soft: #f0ecff;
       --border: #e5e7eb;
       --green: #10b981;
       --red: #ef4444;
-      --yellow: #f59e0b;
       --shadow: 0 20px 55px rgba(31, 41, 55, 0.10);
       --radius: 26px;
     }
@@ -85,7 +84,7 @@
       height: 13px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--primary), var(--green));
-      box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.12);
+      box-shadow: 0 0 0 6px rgba(91, 95, 245, 0.12);
       flex-shrink: 0;
     }
 
@@ -109,7 +108,7 @@
     .lang-btn.active {
       color: white;
       background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      box-shadow: 0 12px 28px rgba(124, 58, 237, 0.28);
+      box-shadow: 0 12px 28px rgba(91, 95, 245, 0.28);
     }
 
     .hero {
@@ -234,8 +233,8 @@
 
     .subunit-card:hover {
       transform: translateY(-3px);
-      border-color: rgba(124, 58, 237, 0.42);
-      box-shadow: 0 16px 38px rgba(124, 58, 237, 0.14);
+      border-color: rgba(91, 95, 245, 0.42);
+      box-shadow: 0 16px 38px rgba(91, 95, 245, 0.14);
     }
 
     .subunit-number {
@@ -291,7 +290,7 @@
       font-size: 20px;
       font-weight: 950;
       background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      box-shadow: 0 16px 32px rgba(124, 58, 237, 0.28);
+      box-shadow: 0 16px 32px rgba(91, 95, 245, 0.28);
     }
 
     .subunit-title-en {
@@ -308,59 +307,89 @@
       font-weight: 700;
     }
 
-    .theme-card {
+    .listening-card {
       margin-top: 22px;
-      overflow: hidden;
+      padding: 26px;
       border: 1px solid var(--border);
-      border-radius: 25px;
-      background: #fbfcff;
-    }
-
-    .theme-top {
-      padding: 22px;
-      background: linear-gradient(135deg, rgba(124, 58, 237, 0.11), rgba(16, 185, 129, 0.08));
-      border-bottom: 1px solid var(--border);
-    }
-
-    .theme-label {
-      margin-bottom: 8px;
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .theme-title {
-      margin-bottom: 6px;
-      font-size: 25px;
-      font-weight: 950;
-    }
-
-    .theme-local {
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .audio-first-box {
-      padding: 22px;
+      border-radius: 30px;
       background: #ffffff;
-      border-bottom: 1px solid var(--border);
+      box-shadow: 0 14px 35px rgba(31, 41, 55, 0.06);
     }
 
-    .audio-first-box h4 {
-      margin-bottom: 10px;
+    .listening-title {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 950;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+      margin-bottom: 18px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--soft);
       color: var(--primary);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .audio-box {
+      padding: 20px;
+      margin-bottom: 22px;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: #f8f8ff;
     }
 
     audio {
       width: 100%;
-      margin-top: 8px;
+      display: block;
     }
 
-    .test-area {
-      padding: 22px;
-      background: #ffffff;
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+
+    .tab-btn {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 13px 20px;
+      background: white;
+      color: var(--muted);
+      font-weight: 950;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 15px;
+    }
+
+    .tab-btn.active {
+      border-color: transparent;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 12px 28px rgba(91, 95, 245, 0.22);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
     }
 
     .instruction {
@@ -404,7 +433,7 @@
     }
 
     .option:hover {
-      border-color: rgba(124, 58, 237, 0.45);
+      border-color: rgba(91, 95, 245, 0.45);
       background: #f8f6ff;
     }
 
@@ -439,7 +468,7 @@
       font-weight: 950;
       background: linear-gradient(135deg, var(--primary), var(--primary-2));
       cursor: pointer;
-      box-shadow: 0 14px 30px rgba(124, 58, 237, 0.24);
+      box-shadow: 0 14px 30px rgba(91, 95, 245, 0.24);
       transition: 0.2s ease;
     }
 
@@ -457,50 +486,11 @@
       font-weight: 950;
     }
 
-    .drop-blocks {
-      display: grid;
-      gap: 12px;
-      padding: 0 22px 22px;
-      background: white;
-    }
-
-    .drop-card {
+    .text-box {
+      padding: 18px;
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 20px;
       background: #fbfcff;
-      overflow: hidden;
-    }
-
-    .drop-card summary {
-      cursor: pointer;
-      padding: 15px 17px;
-      font-weight: 950;
-      color: var(--primary);
-      list-style: none;
-    }
-
-    .drop-card summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .drop-card summary::after {
-      content: "+";
-      float: right;
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    .drop-card[open] summary::after {
-      content: "−";
-    }
-
-    .drop-content {
-      padding: 0 17px 17px;
-      color: var(--text);
-    }
-
-    .transcript,
-    .translation {
       white-space: pre-line;
       font-size: 15.5px;
     }
@@ -518,7 +508,7 @@
     .explanation-list li {
       padding: 12px 14px;
       border-radius: 14px;
-      background: white;
+      background: #fbfcff;
       border: 1px solid var(--border);
     }
 
@@ -529,7 +519,7 @@
 
     .answer-panel {
       display: none;
-      margin: 0 22px 22px;
+      margin-top: 18px;
       padding: 19px;
       border-radius: 20px;
       border: 1px solid rgba(16, 185, 129, 0.25);
@@ -607,18 +597,33 @@
         border-radius: 18px;
       }
 
-      .theme-top,
-      .audio-first-box,
-      .test-area {
+      .listening-card {
         padding: 18px;
+        border-radius: 24px;
       }
 
-      .drop-blocks {
-        padding: 0 18px 18px;
+      .chips {
+        gap: 8px;
       }
 
-      .answer-panel {
-        margin: 0 18px 18px;
+      .chip {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+
+      .audio-box {
+        padding: 14px;
+      }
+
+      .tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 12px;
+      }
+
+      .tab-btn {
+        white-space: nowrap;
+        padding: 11px 16px;
       }
     }
   </style>
@@ -780,143 +785,146 @@
         </div>
       </div>
 
-      <article class="theme-card" id="audio-1">
-        <div class="theme-top">
-          <div
-            class="theme-label"
-            data-kk="Theme 1 / Бірінші тақырып"
-            data-ru="Theme 1 / Первая тема"
-          >
-            Theme 1 / Бірінші тақырып
-          </div>
+      <article class="listening-card" id="audio-1">
+        <div class="listening-title">Listening 1.1 — Meeting other students</div>
 
-          <div class="theme-title">My friends and I</div>
-
-          <div
-            class="theme-local"
-            data-kk="Мен және менің достарым"
-            data-ru="Я и мои друзья"
-          >
-            Мен және менің достарым
-          </div>
+        <div class="chips">
+          <div class="chip">Topic: Me and my friends</div>
+          <div class="chip">Type: Dialogue</div>
+          <div class="chip">Audio: C1.m4a</div>
         </div>
 
-        <div class="audio-first-box">
-          <h4>Audio</h4>
+        <div class="audio-box">
           <audio controls preload="metadata">
-            <source src="1.m4a" type="audio/mp4">
+            <source src="C1.m4a" type="audio/mp4">
             Your browser does not support the audio element.
           </audio>
         </div>
 
-        <div class="test-area" data-test="audio1">
-          <div
-            class="instruction"
-            data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады."
-            data-ru="Прослушайте аудио и ответьте на 8 вопросов. Аудио можно слушать несколько раз."
+        <div class="tabs">
+          <button class="tab-btn active" type="button" onclick="openTab('audio1', 'test')">Test</button>
+          <button class="tab-btn" type="button" onclick="openTab('audio1', 'transcript')">Transcript</button>
+          <button
+            class="tab-btn"
+            type="button"
+            onclick="openTab('audio1', 'translation')"
+            data-kk="Аударма"
+            data-ru="Перевод"
           >
+            Аударма
+          </button>
+          <button class="tab-btn" type="button" onclick="openTab('audio1', 'vocabulary')">Vocabulary</button>
+        </div>
+
+        <div class="tab-panel active" data-tab-group="audio1" data-tab-name="test">
+          <div class="instruction" data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады." data-ru="Прослушайте аудио и ответьте на 8 вопросов. Аудио можно слушать несколько раз.">
             Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады.
           </div>
 
-          <div class="question" data-correct="B">
-            <div class="question-title">1. What does the teacher ask the students to do?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q1" value="A"> A. Open their books and read the text</label>
-              <label class="option"><input type="radio" name="a1q1" value="B"> B. Turn to the people next to them and introduce themselves</label>
-              <label class="option"><input type="radio" name="a1q1" value="C"> C. Write down the important information</label>
-              <label class="option"><input type="radio" name="a1q1" value="D"> D. Choose their university subjects immediately</label>
+          <div class="test-area" data-test="audio1">
+            <div class="question" data-correct="B">
+              <div class="question-title">1. What does the teacher ask the students to do?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q1" value="A"> A. Open their books and read the text</label>
+                <label class="option"><input type="radio" name="a1q1" value="B"> B. Turn to the people next to them and introduce themselves</label>
+                <label class="option"><input type="radio" name="a1q1" value="C"> C. Write down the important information</label>
+                <label class="option"><input type="radio" name="a1q1" value="D"> D. Choose their university subjects immediately</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="C">
+              <div class="question-title">2. Where is Cara from?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q2" value="A"> A. Manchester</label>
+                <label class="option"><input type="radio" name="a1q2" value="B"> B. Leeds</label>
+                <label class="option"><input type="radio" name="a1q2" value="C"> C. Glasgow</label>
+                <label class="option"><input type="radio" name="a1q2" value="D"> D. London</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="A">
+              <div class="question-title">3. Why does Robert say he is half Scottish?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q3" value="A"> A. His mum is from near Glasgow</label>
+                <label class="option"><input type="radio" name="a1q3" value="B"> B. His dad works in Scotland</label>
+                <label class="option"><input type="radio" name="a1q3" value="C"> C. He studies Scottish history</label>
+                <label class="option"><input type="radio" name="a1q3" value="D"> D. He grew up in Glasgow</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="D">
+              <div class="question-title">4. Where does Robert live?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q4" value="A"> A. In Glasgow</label>
+                <label class="option"><input type="radio" name="a1q4" value="B"> B. In Leeds</label>
+                <label class="option"><input type="radio" name="a1q4" value="C"> C. Near London</label>
+                <label class="option"><input type="radio" name="a1q4" value="D"> D. Near Manchester</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="B">
+              <div class="question-title">5. Where did Selim grow up?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q5" value="A"> A. In Leeds</label>
+                <label class="option"><input type="radio" name="a1q5" value="B"> B. Near London</label>
+                <label class="option"><input type="radio" name="a1q5" value="C"> C. In Glasgow</label>
+                <label class="option"><input type="radio" name="a1q5" value="D"> D. Near Manchester</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="A">
+              <div class="question-title">6. What subject is Selim studying with history?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q6" value="A"> A. German</label>
+                <label class="option"><input type="radio" name="a1q6" value="B"> B. French</label>
+                <label class="option"><input type="radio" name="a1q6" value="C"> C. Maths</label>
+                <label class="option"><input type="radio" name="a1q6" value="D"> D. Science</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="C">
+              <div class="question-title">7. What subject is Robert studying with history?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q7" value="A"> A. French</label>
+                <label class="option"><input type="radio" name="a1q7" value="B"> B. German</label>
+                <label class="option"><input type="radio" name="a1q7" value="C"> C. Maths</label>
+                <label class="option"><input type="radio" name="a1q7" value="D"> D. English</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="B">
+              <div class="question-title">8. Why did Selim choose German?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a1q8" value="A"> A. He grew up in Germany</label>
+                <label class="option"><input type="radio" name="a1q8" value="B"> B. He thought German was easier than French</label>
+                <label class="option"><input type="radio" name="a1q8" value="C"> C. His friends advised him to take German</label>
+                <label class="option"><input type="radio" name="a1q8" value="D"> D. German helps him remember dates</label>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="check-btn" type="button" onclick="checkTest('audio1')" data-kk="Show result" data-ru="Show result">Show result</button>
+              <div class="result-box" id="result-audio1"></div>
             </div>
           </div>
 
-          <div class="question" data-correct="C">
-            <div class="question-title">2. Where is Cara from?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q2" value="A"> A. Manchester</label>
-              <label class="option"><input type="radio" name="a1q2" value="B"> B. Leeds</label>
-              <label class="option"><input type="radio" name="a1q2" value="C"> C. Glasgow</label>
-              <label class="option"><input type="radio" name="a1q2" value="D"> D. London</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="A">
-            <div class="question-title">3. Why does Robert say he is half Scottish?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q3" value="A"> A. His mum is from near Glasgow</label>
-              <label class="option"><input type="radio" name="a1q3" value="B"> B. His dad works in Scotland</label>
-              <label class="option"><input type="radio" name="a1q3" value="C"> C. He studies Scottish history</label>
-              <label class="option"><input type="radio" name="a1q3" value="D"> D. He grew up in Glasgow</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="D">
-            <div class="question-title">4. Where does Robert live?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q4" value="A"> A. In Glasgow</label>
-              <label class="option"><input type="radio" name="a1q4" value="B"> B. In Leeds</label>
-              <label class="option"><input type="radio" name="a1q4" value="C"> C. Near London</label>
-              <label class="option"><input type="radio" name="a1q4" value="D"> D. Near Manchester</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="B">
-            <div class="question-title">5. Where did Selim grow up?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q5" value="A"> A. In Leeds</label>
-              <label class="option"><input type="radio" name="a1q5" value="B"> B. Near London</label>
-              <label class="option"><input type="radio" name="a1q5" value="C"> C. In Glasgow</label>
-              <label class="option"><input type="radio" name="a1q5" value="D"> D. Near Manchester</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="A">
-            <div class="question-title">6. What subject is Selim studying with history?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q6" value="A"> A. German</label>
-              <label class="option"><input type="radio" name="a1q6" value="B"> B. French</label>
-              <label class="option"><input type="radio" name="a1q6" value="C"> C. Maths</label>
-              <label class="option"><input type="radio" name="a1q6" value="D"> D. Science</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="C">
-            <div class="question-title">7. What subject is Robert studying with history?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q7" value="A"> A. French</label>
-              <label class="option"><input type="radio" name="a1q7" value="B"> B. German</label>
-              <label class="option"><input type="radio" name="a1q7" value="C"> C. Maths</label>
-              <label class="option"><input type="radio" name="a1q7" value="D"> D. English</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="B">
-            <div class="question-title">8. Why did Selim choose German?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a1q8" value="A"> A. He grew up in Germany</label>
-              <label class="option"><input type="radio" name="a1q8" value="B"> B. He thought German was easier than French</label>
-              <label class="option"><input type="radio" name="a1q8" value="C"> C. His friends advised him to take German</label>
-              <label class="option"><input type="radio" name="a1q8" value="D"> D. German helps him remember dates</label>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button
-              class="check-btn"
-              type="button"
-              onclick="checkTest('audio1')"
-              data-kk="Show result"
-              data-ru="Show result"
-            >
-              Show result
-            </button>
-
-            <div class="result-box" id="result-audio1"></div>
+          <div class="answer-panel" id="answers-audio1">
+            <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
+            <ul class="explanation-list">
+              <li><strong>1 — B.</strong> <span data-kk="Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады." data-ru="Учитель просит студентов повернуться к людям рядом и представиться.">Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады.</span></li>
+              <li><strong>2 — C.</strong> <span data-kk="Кара өзінің Глазгодан екенін айтады." data-ru="Кара говорит, что она из Глазго.">Кара өзінің Глазгодан екенін айтады.</span></li>
+              <li><strong>3 — A.</strong> <span data-kk="Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді." data-ru="Роберт говорит, что его мама из места рядом с Глазго, поэтому он наполовину шотландец.">Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді.</span></li>
+              <li><strong>4 — D.</strong> <span data-kk="Роберт Англияда, Манчестерге жақын жерде тұратынын айтады." data-ru="Роберт говорит, что живёт в Англии, недалеко от Манчестера.">Роберт Англияда, Манчестерге жақын жерде тұратынын айтады.</span></li>
+              <li><strong>5 — B.</strong> <span data-kk="Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады." data-ru="Селим говорит, что он из Лидса, но вырос рядом с Лондоном.">Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады.</span></li>
+              <li><strong>6 — A.</strong> <span data-kk="Селим тарих пен неміс тілін оқып жүр." data-ru="Селим изучает историю и немецкий.">Селим тарих пен неміс тілін оқып жүр.</span></li>
+              <li><strong>7 — C.</strong> <span data-kk="Роберт тарихты математикамен бірге оқитынын айтады." data-ru="Роберт говорит, что изучает историю вместе с математикой.">Роберт тарихты математикамен бірге оқитынын айтады.</span></li>
+              <li><strong>8 — B.</strong> <span data-kk="Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған." data-ru="Селим хотел французский, но выбрал немецкий, потому что он был легче.">Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған.</span></li>
+            </ul>
           </div>
         </div>
 
-        <div class="drop-blocks">
-          <details class="drop-card">
-            <summary>Transcript</summary>
-            <div class="drop-content transcript">Teacher: So, now you've got the important information, it's time to meet each other. Everyone turn to the people next to you and introduce yourselves.
+        <div class="tab-panel" data-tab-group="audio1" data-tab-name="transcript">
+          <div class="text-box">Teacher: So, now you've got the important information, it's time to meet each other. Everyone turn to the people next to you and introduce yourselves.
 
 Cara: So, hi. I'm Cara. And you are?
 
@@ -955,13 +963,12 @@ Cara: I'm doing history and French.
 Selim: I wanted to do French but German was easier, so I took that.
 
 Cara: German is so hard!</div>
-          </details>
+        </div>
 
-          <details class="drop-card">
-            <summary>Translation</summary>
-            <div
-              class="drop-content translation"
-              data-kk="Мұғалім: Сонымен, енді сіздер маңызды ақпаратты алдыңыздар, бір-біріңізбен танысатын уақыт келді. Қасыңыздағы адамдарға бұрылып, өздеріңізді таныстырыңыздар.
+        <div class="tab-panel" data-tab-group="audio1" data-tab-name="translation">
+          <div
+            class="text-box"
+            data-kk="Мұғалім: Сонымен, енді сіздер маңызды ақпаратты алдыңыздар, бір-біріңізбен танысатын уақыт келді. Қасыңыздағы адамдарға бұрылып, өздеріңізді таныстырыңыздар.
 
 Кара: Сәлем. Менің атым Кара. Ал сендер?
 
@@ -1000,7 +1007,7 @@ Cara: German is so hard!</div>
 Селим: Мен француз тілін оқығым келген, бірақ неміс тілі жеңілірек болды, сондықтан соны таңдадым.
 
 Кара: Неміс тілі өте қиын ғой!"
-              data-ru="Учитель: Итак, теперь вы получили важную информацию, пора познакомиться друг с другом. Повернитесь к людям рядом с вами и представьтесь.
+            data-ru="Учитель: Итак, теперь вы получили важную информацию, пора познакомиться друг с другом. Повернитесь к людям рядом с вами и представьтесь.
 
 Кара: Привет. Я Кара. А вы?
 
@@ -1039,258 +1046,186 @@ Cara: German is so hard!</div>
 Селим: Я хотел изучать французский, но немецкий был легче, поэтому я выбрал его.
 
 Кара: Немецкий такой сложный!"
-            >
-              Мұғалім: Сонымен, енді сіздер маңызды ақпаратты алдыңыздар, бір-біріңізбен танысатын уақыт келді. Қасыңыздағы адамдарға бұрылып, өздеріңізді таныстырыңыздар.
-
-Кара: Сәлем. Менің атым Кара. Ал сендер?
-
-Роберт: Роберт.
-
-Селим: Селим.
-
-Кара: Танысқаныма қуаныштымын!
-
-Роберт және Селим: Біз де қуаныштымыз.
-
-Роберт: Акцентің жақсы екен. Қайдансың?
-
-Кара: Мен Глазгоданмын.
-
-Роберт: Рас па? Менің анам Глазгоға жақын жерден, сондықтан мен жартылай шотландпын.
-
-Кара: Керемет. Сен Шотландияда тұрасың ба?
-
-Роберт: Жоқ, біз Англияда, Манчестерге жақын жерде тұрамыз. Әкем сол жақтан. Ал сен ше, Селим?
-
-Селим: Негізі мен Лидстенмін, бірақ Лондонға жақын жерде өстім.
-
-Кара: Екеуің де тарихты жеке пән ретінде оқып жүрсіңдер ме?
-
-Селим: Жоқ. Мен тарих пен неміс тілін оқып жүрмін.
-
-Роберт: Ал мен тарихты математикамен бірге оқимын.
-
-Селим: Тарих және математика. Бұл ерекше екен!
-
-Роберт: Иә, мен өнер саласы мен ғылым саласының бірін таңдай алмадым. Бірақ математика даталарды есте сақтауға көмектеспейді! Ал сен ше?
-
-Кара: Мен тарих пен француз тілін оқып жүрмін.
-
-Селим: Мен француз тілін оқығым келген, бірақ неміс тілі жеңілірек болды, сондықтан соны таңдадым.
-
-Кара: Неміс тілі өте қиын ғой!
-            </div>
-          </details>
-
-          <details class="drop-card">
-            <summary>Vocabulary</summary>
-            <div class="drop-content">
-              <ul class="vocab-list">
-                <li><strong>to introduce yourself</strong> — <span data-kk="өзіңді таныстыру" data-ru="представиться">өзіңді таныстыру</span></li>
-                <li><strong>accent</strong> — <span data-kk="акцент, сөйлеу мәнері" data-ru="акцент, манера произношения">акцент, сөйлеу мәнері</span></li>
-                <li><strong>originally</strong> — <span data-kk="негізі, бастапқыда" data-ru="изначально, вообще-то">негізі, бастапқыда</span></li>
-                <li><strong>to grow up</strong> — <span data-kk="өсу, ержету" data-ru="вырасти, взрослеть">өсу, ержету</span></li>
-                <li><strong>on its own</strong> — <span data-kk="жеке, бөлек" data-ru="само по себе, отдельно">жеке, бөлек</span></li>
-                <li><strong>to decide between</strong> — <span data-kk="екі нәрсенің бірін таңдау" data-ru="выбирать между чем-либо">екі нәрсенің бірін таңдау</span></li>
-              </ul>
-            </div>
-          </details>
+          >
+            Мұғалім: Сонымен, енді сіздер маңызды ақпаратты алдыңыздар, бір-біріңізбен танысатын уақыт келді. Қасыңыздағы адамдарға бұрылып, өздеріңізді таныстырыңыздар.
+          </div>
         </div>
 
-        <div class="answer-panel" id="answers-audio1">
-          <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
-          <ul class="explanation-list">
-            <li><strong>1 — B.</strong> <span data-kk="Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады." data-ru="Учитель просит студентов повернуться к людям рядом и представиться.">Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады.</span></li>
-            <li><strong>2 — C.</strong> <span data-kk="Кара өзінің Глазгодан екенін айтады." data-ru="Кара говорит, что она из Глазго.">Кара өзінің Глазгодан екенін айтады.</span></li>
-            <li><strong>3 — A.</strong> <span data-kk="Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді." data-ru="Роберт говорит, что его мама из места рядом с Глазго, поэтому он наполовину шотландец.">Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді.</span></li>
-            <li><strong>4 — D.</strong> <span data-kk="Роберт Англияда, Манчестерге жақын жерде тұратынын айтады." data-ru="Роберт говорит, что живёт в Англии, недалеко от Манчестера.">Роберт Англияда, Манчестерге жақын жерде тұратынын айтады.</span></li>
-            <li><strong>5 — B.</strong> <span data-kk="Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады." data-ru="Селим говорит, что он из Лидса, но вырос рядом с Лондоном.">Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады.</span></li>
-            <li><strong>6 — A.</strong> <span data-kk="Селим тарих пен неміс тілін оқып жүр." data-ru="Селим изучает историю и немецкий.">Селим тарих пен неміс тілін оқып жүр.</span></li>
-            <li><strong>7 — C.</strong> <span data-kk="Роберт тарихты математикамен бірге оқитынын айтады." data-ru="Роберт говорит, что изучает историю вместе с математикой.">Роберт тарихты математикамен бірге оқитынын айтады.</span></li>
-            <li><strong>8 — B.</strong> <span data-kk="Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған." data-ru="Селим хотел французский, но выбрал немецкий, потому что он был легче.">Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған.</span></li>
+        <div class="tab-panel" data-tab-group="audio1" data-tab-name="vocabulary">
+          <ul class="vocab-list">
+            <li><strong>to introduce yourself</strong> — <span data-kk="өзіңді таныстыру" data-ru="представиться">өзіңді таныстыру</span></li>
+            <li><strong>accent</strong> — <span data-kk="акцент, сөйлеу мәнері" data-ru="акцент, манера произношения">акцент, сөйлеу мәнері</span></li>
+            <li><strong>originally</strong> — <span data-kk="негізі, бастапқыда" data-ru="изначально, вообще-то">негізі, бастапқыда</span></li>
+            <li><strong>to grow up</strong> — <span data-kk="өсу, ержету" data-ru="вырасти, взрослеть">өсу, ержету</span></li>
+            <li><strong>on its own</strong> — <span data-kk="жеке, бөлек" data-ru="само по себе, отдельно">жеке, бөлек</span></li>
+            <li><strong>to decide between</strong> — <span data-kk="екі нәрсенің бірін таңдау" data-ru="выбирать между чем-либо">екі нәрсенің бірін таңдау</span></li>
           </ul>
         </div>
       </article>
 
-      <article class="theme-card" id="audio-2">
-        <div class="theme-top">
-          <div
-            class="theme-label"
-            data-kk="Theme 2 / Екінші тақырып"
-            data-ru="Theme 2 / Вторая тема"
-          >
-            Theme 2 / Екінші тақырып
-          </div>
+      <article class="listening-card" id="audio-2">
+        <div class="listening-title">Listening 1.2 — My favourite room</div>
 
-          <div class="theme-title">My home</div>
-
-          <div
-            class="theme-local"
-            data-kk="Менің үйім"
-            data-ru="Мой дом"
-          >
-            Менің үйім
-          </div>
+        <div class="chips">
+          <div class="chip">Topic: My home</div>
+          <div class="chip">Type: Monologue</div>
+          <div class="chip">Audio: 1.2.m4a</div>
         </div>
 
-        <div class="audio-first-box">
-          <h4>Audio</h4>
+        <div class="audio-box">
           <audio controls preload="metadata">
             <source src="1.2.m4a" type="audio/mp4">
             Your browser does not support the audio element.
           </audio>
         </div>
 
-        <div class="test-area" data-test="audio2">
-          <div
-            class="instruction"
-            data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Сұрақтар мен жауап нұсқалары ағылшын тілінде берілген."
-            data-ru="Прослушайте аудио и ответьте на 8 вопросов. Вопросы и варианты ответов даны на английском языке."
+        <div class="tabs">
+          <button class="tab-btn active" type="button" onclick="openTab('audio2', 'test')">Test</button>
+          <button class="tab-btn" type="button" onclick="openTab('audio2', 'transcript')">Transcript</button>
+          <button
+            class="tab-btn"
+            type="button"
+            onclick="openTab('audio2', 'translation')"
+            data-kk="Аударма"
+            data-ru="Перевод"
           >
+            Аударма
+          </button>
+          <button class="tab-btn" type="button" onclick="openTab('audio2', 'vocabulary')">Vocabulary</button>
+        </div>
+
+        <div class="tab-panel active" data-tab-group="audio2" data-tab-name="test">
+          <div class="instruction" data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Сұрақтар мен жауап нұсқалары ағылшын тілінде берілген." data-ru="Прослушайте аудио и ответьте на 8 вопросов. Вопросы и варианты ответов даны на английском языке.">
             Аудионы тыңдап, 8 сұраққа жауап беріңіз. Сұрақтар мен жауап нұсқалары ағылшын тілінде берілген.
           </div>
 
-          <div class="question" data-correct="C">
-            <div class="question-title">1. What is the speaker’s favourite room?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q1" value="A"> A. The bedroom</label>
-              <label class="option"><input type="radio" name="a2q1" value="B"> B. The kitchen</label>
-              <label class="option"><input type="radio" name="a2q1" value="C"> C. The living room</label>
-              <label class="option"><input type="radio" name="a2q1" value="D"> D. The study room</label>
+          <div class="test-area" data-test="audio2">
+            <div class="question" data-correct="C">
+              <div class="question-title">1. What is the speaker’s favourite room?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q1" value="A"> A. The bedroom</label>
+                <label class="option"><input type="radio" name="a2q1" value="B"> B. The kitchen</label>
+                <label class="option"><input type="radio" name="a2q1" value="C"> C. The living room</label>
+                <label class="option"><input type="radio" name="a2q1" value="D"> D. The study room</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="A">
+              <div class="question-title">2. How does the speaker describe the room?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q2" value="A"> A. Small but very cozy</label>
+                <label class="option"><input type="radio" name="a2q2" value="B"> B. Large and expensive</label>
+                <label class="option"><input type="radio" name="a2q2" value="C"> C. Dark but modern</label>
+                <label class="option"><input type="radio" name="a2q2" value="D"> D. Bright and empty</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="D">
+              <div class="question-title">3. What is in the corner of the living room?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q3" value="A"> A. A television and a lamp</label>
+                <label class="option"><input type="radio" name="a2q3" value="B"> B. A big table with candles</label>
+                <label class="option"><input type="radio" name="a2q3" value="C"> C. A sofa with cushions</label>
+                <label class="option"><input type="radio" name="a2q3" value="D"> D. A small bookshelf with books and plants</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="B">
+              <div class="question-title">4. What does the speaker think plants do?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q4" value="A"> A. They make the room look bigger</label>
+                <label class="option"><input type="radio" name="a2q4" value="B"> B. They make the room look nice</label>
+                <label class="option"><input type="radio" name="a2q4" value="C"> C. They make the room feel cold</label>
+                <label class="option"><input type="radio" name="a2q4" value="D"> D. They make the room expensive</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="A">
+              <div class="question-title">5. What is the best thing in the speaker’s living room?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q5" value="A"> A. The sofa</label>
+                <label class="option"><input type="radio" name="a2q5" value="B"> B. The bookshelf</label>
+                <label class="option"><input type="radio" name="a2q5" value="C"> C. The small table</label>
+                <label class="option"><input type="radio" name="a2q5" value="D"> D. The pictures</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="C">
+              <div class="question-title">6. What does the speaker usually put on the small table?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q6" value="A"> A. Books or plants</label>
+                <label class="option"><input type="radio" name="a2q6" value="B"> B. A phone or a laptop</label>
+                <label class="option"><input type="radio" name="a2q6" value="C"> C. Tea or some candles</label>
+                <label class="option"><input type="radio" name="a2q6" value="D"> D. Pictures or cushions</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="D">
+              <div class="question-title">7. What does the speaker do when alone?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q7" value="A"> A. Talks with friends</label>
+                <label class="option"><input type="radio" name="a2q7" value="B"> B. Cleans the room</label>
+                <label class="option"><input type="radio" name="a2q7" value="C"> C. Studies German</label>
+                <label class="option"><input type="radio" name="a2q7" value="D"> D. Watches TV or reads a book</label>
+              </div>
+            </div>
+
+            <div class="question" data-correct="B">
+              <div class="question-title">8. What is the speaker’s main idea about a living room?</div>
+              <div class="options">
+                <label class="option"><input type="radio" name="a2q8" value="A"> A. It should have many expensive things</label>
+                <label class="option"><input type="radio" name="a2q8" value="B"> B. It should be comfortable and relaxing</label>
+                <label class="option"><input type="radio" name="a2q8" value="C"> C. It should be large and modern</label>
+                <label class="option"><input type="radio" name="a2q8" value="D"> D. It should be used only for guests</label>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="check-btn" type="button" onclick="checkTest('audio2')" data-kk="Show result" data-ru="Show result">Show result</button>
+              <div class="result-box" id="result-audio2"></div>
             </div>
           </div>
 
-          <div class="question" data-correct="A">
-            <div class="question-title">2. How does the speaker describe the room?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q2" value="A"> A. Small but very cozy</label>
-              <label class="option"><input type="radio" name="a2q2" value="B"> B. Large and expensive</label>
-              <label class="option"><input type="radio" name="a2q2" value="C"> C. Dark but modern</label>
-              <label class="option"><input type="radio" name="a2q2" value="D"> D. Bright and empty</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="D">
-            <div class="question-title">3. What is in the corner of the living room?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q3" value="A"> A. A television and a lamp</label>
-              <label class="option"><input type="radio" name="a2q3" value="B"> B. A big table with candles</label>
-              <label class="option"><input type="radio" name="a2q3" value="C"> C. A sofa with cushions</label>
-              <label class="option"><input type="radio" name="a2q3" value="D"> D. A small bookshelf with books and plants</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="B">
-            <div class="question-title">4. What does the speaker think plants do?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q4" value="A"> A. They make the room look bigger</label>
-              <label class="option"><input type="radio" name="a2q4" value="B"> B. They make the room look nice</label>
-              <label class="option"><input type="radio" name="a2q4" value="C"> C. They make the room feel cold</label>
-              <label class="option"><input type="radio" name="a2q4" value="D"> D. They make the room expensive</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="A">
-            <div class="question-title">5. What is the best thing in the speaker’s living room?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q5" value="A"> A. The sofa</label>
-              <label class="option"><input type="radio" name="a2q5" value="B"> B. The bookshelf</label>
-              <label class="option"><input type="radio" name="a2q5" value="C"> C. The small table</label>
-              <label class="option"><input type="radio" name="a2q5" value="D"> D. The pictures</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="C">
-            <div class="question-title">6. What does the speaker usually put on the small table?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q6" value="A"> A. Books or plants</label>
-              <label class="option"><input type="radio" name="a2q6" value="B"> B. A phone or a laptop</label>
-              <label class="option"><input type="radio" name="a2q6" value="C"> C. Tea or some candles</label>
-              <label class="option"><input type="radio" name="a2q6" value="D"> D. Pictures or cushions</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="D">
-            <div class="question-title">7. What does the speaker do when alone?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q7" value="A"> A. Talks with friends</label>
-              <label class="option"><input type="radio" name="a2q7" value="B"> B. Cleans the room</label>
-              <label class="option"><input type="radio" name="a2q7" value="C"> C. Studies German</label>
-              <label class="option"><input type="radio" name="a2q7" value="D"> D. Watches TV or reads a book</label>
-            </div>
-          </div>
-
-          <div class="question" data-correct="B">
-            <div class="question-title">8. What is the speaker’s main idea about a living room?</div>
-            <div class="options">
-              <label class="option"><input type="radio" name="a2q8" value="A"> A. It should have many expensive things</label>
-              <label class="option"><input type="radio" name="a2q8" value="B"> B. It should be comfortable and relaxing</label>
-              <label class="option"><input type="radio" name="a2q8" value="C"> C. It should be large and modern</label>
-              <label class="option"><input type="radio" name="a2q8" value="D"> D. It should be used only for guests</label>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button
-              class="check-btn"
-              type="button"
-              onclick="checkTest('audio2')"
-              data-kk="Show result"
-              data-ru="Show result"
-            >
-              Show result
-            </button>
-
-            <div class="result-box" id="result-audio2"></div>
+          <div class="answer-panel" id="answers-audio2">
+            <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
+            <ul class="explanation-list">
+              <li><strong>1 — C.</strong> <span data-kk="Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады." data-ru="Говорящий говорит, что его любимая комната — гостиная.">Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады.</span></li>
+              <li><strong>2 — A.</strong> <span data-kk="Бөлме кішкентай, бірақ өте жайлы деп сипатталады." data-ru="Комната описывается как маленькая, но очень уютная.">Бөлме кішкентай, бірақ өте жайлы деп сипатталады.</span></li>
+              <li><strong>3 — D.</strong> <span data-kk="Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр." data-ru="В углу стоит маленькая книжная полка с книгами и растениями.">Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр.</span></li>
+              <li><strong>4 — B.</strong> <span data-kk="Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді." data-ru="По мнению говорящего, растения делают комнату красивой.">Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді.</span></li>
+              <li><strong>5 — A.</strong> <span data-kk="Қонақ бөлмедегі ең жақсы нәрсе — диван." data-ru="Самая лучшая вещь в гостиной — диван.">Қонақ бөлмедегі ең жақсы нәрсе — диван.</span></li>
+              <li><strong>6 — C.</strong> <span data-kk="Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады." data-ru="Говорящий говорит, что обычно ставит на столик чай или свечи.">Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады.</span></li>
+              <li><strong>7 — D.</strong> <span data-kk="Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды." data-ru="Когда говорящий один, он смотрит телевизор или читает книгу.">Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды.</span></li>
+              <li><strong>8 — B.</strong> <span data-kk="Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек." data-ru="Главная мысль: гостиная должна быть удобной и расслабляющей.">Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек.</span></li>
+            </ul>
           </div>
         </div>
 
-        <div class="drop-blocks">
-          <details class="drop-card">
-            <summary>Transcript</summary>
-            <div class="drop-content transcript">My favourite room is the living room. It's small but very cozy. The walls are light and I've got some pictures on them. There's a small bookshelf in the corner with books and plants. I think plants make the room look nice. The best thing in my living room is the sofa. It's big and soft with some cushions and a warm blanket in front of it. There's a small table. I usually put my tea or some candles on it. In the evening, I turn on small lights. They make the room feel warm. I love this room because it's good for relaxing. When I'm alone, I watch TV or read a book. When my friends visit, we sit on the sofa and talk. I think a living room should feel comfortable and relaxing. It doesn't need to be big and you don't need lots of expensive things. It should just be a place where you feel happy and relaxed.</div>
-          </details>
-
-          <details class="drop-card">
-            <summary>Translation</summary>
-            <div
-              class="drop-content translation"
-              data-kk="Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек."
-              data-ru="Моя любимая комната — гостиная. Она маленькая, но очень уютная. Стены светлые, и на них есть несколько картин. В углу стоит небольшая книжная полка с книгами и растениями. Я думаю, растения делают комнату красивой. Самая лучшая вещь в моей гостиной — диван. Он большой и мягкий, с подушками и тёплым пледом перед ним. Там есть маленький столик. Обычно я ставлю на него чай или несколько свечей. Вечером я включаю маленькие огни. Они делают комнату тёплой и уютной. Я люблю эту комнату, потому что она хорошо подходит для отдыха. Когда я одна, я смотрю телевизор или читаю книгу. Когда приходят мои друзья, мы сидим на диване и разговариваем. Я думаю, гостиная должна быть удобной и расслабляющей. Она не обязана быть большой, и в ней не нужно много дорогих вещей. Это просто должно быть место, где ты чувствуешь себя счастливым и спокойным."
-            >
-              Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек.
-            </div>
-          </details>
-
-          <details class="drop-card">
-            <summary>Vocabulary</summary>
-            <div class="drop-content">
-              <ul class="vocab-list">
-                <li><strong>living room</strong> — <span data-kk="қонақ бөлме" data-ru="гостиная">қонақ бөлме</span></li>
-                <li><strong>cozy</strong> — <span data-kk="жайлы, ыңғайлы" data-ru="уютный">жайлы, ыңғайлы</span></li>
-                <li><strong>bookshelf</strong> — <span data-kk="кітап сөресі" data-ru="книжная полка">кітап сөресі</span></li>
-                <li><strong>plants</strong> — <span data-kk="өсімдіктер" data-ru="растения">өсімдіктер</span></li>
-                <li><strong>cushions</strong> — <span data-kk="диван жастықтары" data-ru="диванные подушки">диван жастықтары</span></li>
-                <li><strong>blanket</strong> — <span data-kk="көрпе" data-ru="плед, одеяло">көрпе</span></li>
-                <li><strong>candles</strong> — <span data-kk="шамдар" data-ru="свечи">шамдар</span></li>
-                <li><strong>comfortable</strong> — <span data-kk="ыңғайлы, жайлы" data-ru="удобный, комфортный">ыңғайлы, жайлы</span></li>
-                <li><strong>relaxing</strong> — <span data-kk="тыныштандыратын, демалдыратын" data-ru="расслабляющий">тыныштандыратын, демалдыратын</span></li>
-              </ul>
-            </div>
-          </details>
+        <div class="tab-panel" data-tab-group="audio2" data-tab-name="transcript">
+          <div class="text-box">My favourite room is the living room. It's small but very cozy. The walls are light and I've got some pictures on them. There's a small bookshelf in the corner with books and plants. I think plants make the room look nice. The best thing in my living room is the sofa. It's big and soft with some cushions and a warm blanket in front of it. There's a small table. I usually put my tea or some candles on it. In the evening, I turn on small lights. They make the room feel warm. I love this room because it's good for relaxing. When I'm alone, I watch TV or read a book. When my friends visit, we sit on the sofa and talk. I think a living room should feel comfortable and relaxing. It doesn't need to be big and you don't need lots of expensive things. It should just be a place where you feel happy and relaxed.</div>
         </div>
 
-        <div class="answer-panel" id="answers-audio2">
-          <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
-          <ul class="explanation-list">
-            <li><strong>1 — C.</strong> <span data-kk="Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады." data-ru="Говорящий говорит, что его любимая комната — гостиная.">Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады.</span></li>
-            <li><strong>2 — A.</strong> <span data-kk="Бөлме кішкентай, бірақ өте жайлы деп сипатталады." data-ru="Комната описывается как маленькая, но очень уютная.">Бөлме кішкентай, бірақ өте жайлы деп сипатталады.</span></li>
-            <li><strong>3 — D.</strong> <span data-kk="Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр." data-ru="В углу стоит маленькая книжная полка с книгами и растениями.">Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр.</span></li>
-            <li><strong>4 — B.</strong> <span data-kk="Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді." data-ru="По мнению говорящего, растения делают комнату красивой.">Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді.</span></li>
-            <li><strong>5 — A.</strong> <span data-kk="Қонақ бөлмедегі ең жақсы нәрсе — диван." data-ru="Самая лучшая вещь в гостиной — диван.">Қонақ бөлмедегі ең жақсы нәрсе — диван.</span></li>
-            <li><strong>6 — C.</strong> <span data-kk="Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады." data-ru="Говорящий говорит, что обычно ставит на столик чай или свечи.">Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады.</span></li>
-            <li><strong>7 — D.</strong> <span data-kk="Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды." data-ru="Когда говорящий один, он смотрит телевизор или читает книгу.">Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды.</span></li>
-            <li><strong>8 — B.</strong> <span data-kk="Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек." data-ru="Главная мысль: гостиная должна быть удобной и расслабляющей.">Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек.</span></li>
+        <div class="tab-panel" data-tab-group="audio2" data-tab-name="translation">
+          <div
+            class="text-box"
+            data-kk="Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек."
+            data-ru="Моя любимая комната — гостиная. Она маленькая, но очень уютная. Стены светлые, и на них есть несколько картин. В углу стоит небольшая книжная полка с книгами и растениями. Я думаю, растения делают комнату красивой. Самая лучшая вещь в моей гостиной — диван. Он большой и мягкий, с подушками и тёплым пледом перед ним. Там есть маленький столик. Обычно я ставлю на него чай или несколько свечей. Вечером я включаю маленькие огни. Они делают комнату тёплой и уютной. Я люблю эту комнату, потому что она хорошо подходит для отдыха. Когда я одна, я смотрю телевизор или читаю книгу. Когда приходят мои друзья, мы сидим на диване и разговариваем. Я думаю, гостиная должна быть удобной и расслабляющей. Она не обязана быть большой, и в ней не нужно много дорогих вещей. Это просто должно быть место, где ты чувствуешь себя счастливым и спокойным."
+          >
+            Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек.
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-group="audio2" data-tab-name="vocabulary">
+          <ul class="vocab-list">
+            <li><strong>living room</strong> — <span data-kk="қонақ бөлме" data-ru="гостиная">қонақ бөлме</span></li>
+            <li><strong>cozy</strong> — <span data-kk="жайлы, ыңғайлы" data-ru="уютный">жайлы, ыңғайлы</span></li>
+            <li><strong>bookshelf</strong> — <span data-kk="кітап сөресі" data-ru="книжная полка">кітап сөресі</span></li>
+            <li><strong>plants</strong> — <span data-kk="өсімдіктер" data-ru="растения">өсімдіктер</span></li>
+            <li><strong>cushions</strong> — <span data-kk="диван жастықтары" data-ru="диванные подушки">диван жастықтары</span></li>
+            <li><strong>blanket</strong> — <span data-kk="көрпе" data-ru="плед, одеяло">көрпе</span></li>
+            <li><strong>candles</strong> — <span data-kk="шамдар" data-ru="свечи">шамдар</span></li>
+            <li><strong>comfortable</strong> — <span data-kk="ыңғайлы, жайлы" data-ru="удобный, комфортный">ыңғайлы, жайлы</span></li>
+            <li><strong>relaxing</strong> — <span data-kk="тыныштандыратын, демалдыратын" data-ru="расслабляющий">тыныштандыратын, демалдыратын</span></li>
           </ul>
         </div>
       </article>
@@ -1321,6 +1256,22 @@ Cara: German is so hard!</div>
         });
       });
 
+      function openTab(group, tabName) {
+        document.querySelectorAll(`[data-tab-group="${group}"]`).forEach((panel) => {
+          panel.classList.toggle("active", panel.dataset.tabName === tabName);
+        });
+
+        const card = document.querySelector(`#${group.replace("audio", "audio-")} `);
+        const listeningCard = document.getElementById(group.replace("audio", "audio-"));
+
+        if (listeningCard) {
+          listeningCard.querySelectorAll(".tab-btn").forEach((button) => {
+            const onclick = button.getAttribute("onclick") || "";
+            button.classList.toggle("active", onclick.includes(`'${tabName}'`));
+          });
+        }
+      }
+
       function checkTest(testId) {
         const testArea = document.querySelector(`[data-test="${testId}"]`);
         const questions = testArea.querySelectorAll(".question");
@@ -1337,6 +1288,7 @@ Cara: German is so hard!</div>
             option.classList.remove("correct", "wrong");
 
             const input = option.querySelector("input");
+
             if (input.value === correctAnswer) {
               option.classList.add("correct");
             }
