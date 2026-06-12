@@ -1,1 +1,1372 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Unit 1 — Human, Society and Spiritual Values</title>
+
+  <style>
+    :root {
+      --bg: #f7f4ff;
+      --card: #ffffff;
+      --text: #171827;
+      --muted: #6b7280;
+      --primary: #7c3aed;
+      --primary-2: #4f46e5;
+      --soft: #f0ecff;
+      --border: #e5e7eb;
+      --green: #10b981;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --shadow: 0 20px 55px rgba(31, 41, 55, 0.10);
+      --radius: 26px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(124, 58, 237, 0.18), transparent 34%),
+        radial-gradient(circle at 90% 8%, rgba(16, 185, 129, 0.12), transparent 30%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 16px 0 80px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 10px;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(229, 231, 235, 0.8);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 14px 35px rgba(31, 41, 55, 0.08);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-left: 8px;
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .brand-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--green));
+      box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.12);
+      flex-shrink: 0;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 9px 15px;
+      background: var(--soft);
+      color: var(--primary);
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .lang-btn.active {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 12px 28px rgba(124, 58, 237, 0.28);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px 34px;
+      border-radius: 36px;
+      color: white;
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.17);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 850px;
+      font-size: clamp(30px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+    }
+
+    .hero .english-title {
+      margin-top: 12px;
+      font-size: clamp(15px, 2vw, 19px);
+      opacity: 0.9;
+      text-transform: lowercase;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 22px 0 0;
+      font-size: 17px;
+      opacity: 0.94;
+    }
+
+    .section {
+      margin-top: 26px;
+      padding: 28px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow {
+      margin-bottom: 7px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h2, h3, h4 {
+      margin: 0;
+      line-height: 1.2;
+      letter-spacing: -0.45px;
+    }
+
+    h2 {
+      font-size: clamp(24px, 3vw, 34px);
+    }
+
+    h3 {
+      font-size: clamp(22px, 2.6vw, 32px);
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .subunit-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .subunit-card {
+      min-height: 154px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: linear-gradient(180deg, #ffffff, #fbfaff);
+      transition: 0.2s ease;
+    }
+
+    .subunit-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(124, 58, 237, 0.42);
+      box-shadow: 0 16px 38px rgba(124, 58, 237, 0.14);
+    }
+
+    .subunit-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--soft);
+      color: var(--primary);
+      font-weight: 950;
+    }
+
+    .subunit-card strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .subunit-card span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .subunit-block {
+      scroll-margin-top: 96px;
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: 30px;
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .subunit-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .big-number {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 21px;
+      color: white;
+      font-size: 20px;
+      font-weight: 950;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 16px 32px rgba(124, 58, 237, 0.28);
+    }
+
+    .subunit-title-en {
+      font-size: clamp(25px, 3.2vw, 40px);
+      font-weight: 950;
+      line-height: 1.08;
+      letter-spacing: -1px;
+    }
+
+    .subunit-title-local {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .theme-card {
+      margin-top: 22px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: #fbfcff;
+    }
+
+    .theme-top {
+      padding: 22px;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.11), rgba(16, 185, 129, 0.08));
+      border-bottom: 1px solid var(--border);
+    }
+
+    .theme-label {
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .theme-title {
+      margin-bottom: 6px;
+      font-size: 25px;
+      font-weight: 950;
+    }
+
+    .theme-local {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .audio-first-box {
+      padding: 22px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .audio-first-box h4 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .test-area {
+      padding: 22px;
+      background: #ffffff;
+    }
+
+    .instruction {
+      margin-bottom: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fbfcff;
+      color: var(--muted);
+    }
+
+    .question {
+      margin-bottom: 14px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+    }
+
+    .question-title {
+      margin-bottom: 12px;
+      font-weight: 950;
+    }
+
+    .options {
+      display: grid;
+      gap: 9px;
+    }
+
+    .option {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #fbfcff;
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
+
+    .option:hover {
+      border-color: rgba(124, 58, 237, 0.45);
+      background: #f8f6ff;
+    }
+
+    .option input {
+      margin-top: 4px;
+      accent-color: var(--primary);
+    }
+
+    .option.correct {
+      border-color: rgba(16, 185, 129, 0.65);
+      background: #ecfdf5;
+    }
+
+    .option.wrong {
+      border-color: rgba(239, 68, 68, 0.65);
+      background: #fef2f2;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .check-btn {
+      border: none;
+      border-radius: 16px;
+      padding: 13px 20px;
+      color: white;
+      font-weight: 950;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(124, 58, 237, 0.24);
+      transition: 0.2s ease;
+    }
+
+    .check-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .result-box {
+      display: none;
+      padding: 13px 16px;
+      border-radius: 16px;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      font-weight: 950;
+    }
+
+    .drop-blocks {
+      display: grid;
+      gap: 12px;
+      padding: 0 22px 22px;
+      background: white;
+    }
+
+    .drop-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fbfcff;
+      overflow: hidden;
+    }
+
+    .drop-card summary {
+      cursor: pointer;
+      padding: 15px 17px;
+      font-weight: 950;
+      color: var(--primary);
+      list-style: none;
+    }
+
+    .drop-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .drop-card summary::after {
+      content: "+";
+      float: right;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .drop-card[open] summary::after {
+      content: "−";
+    }
+
+    .drop-content {
+      padding: 0 17px 17px;
+      color: var(--text);
+    }
+
+    .transcript,
+    .translation {
+      white-space: pre-line;
+      font-size: 15.5px;
+    }
+
+    .vocab-list,
+    .explanation-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .vocab-list li,
+    .explanation-list li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .vocab-list strong,
+    .explanation-list strong {
+      color: var(--text);
+    }
+
+    .answer-panel {
+      display: none;
+      margin: 0 22px 22px;
+      padding: 19px;
+      border-radius: 20px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      background: #ecfdf5;
+    }
+
+    .answer-panel h4 {
+      margin-bottom: 12px;
+      color: #047857;
+    }
+
+    @media (max-width: 960px) {
+      .subunit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 18px, 1180px);
+        padding-top: 10px;
+      }
+
+      .topbar {
+        top: 6px;
+        border-radius: 22px;
+        align-items: stretch;
+      }
+
+      .brand {
+        font-size: 12px;
+      }
+
+      .lang-btn {
+        padding: 8px 12px;
+      }
+
+      .hero {
+        padding: 32px 22px;
+        border-radius: 27px;
+      }
+
+      .section,
+      .subunit-block {
+        padding: 20px;
+        border-radius: 24px;
+      }
+
+      .subunit-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 4px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .subunit-card {
+        min-width: 230px;
+        min-height: 138px;
+        scroll-snap-align: start;
+      }
+
+      .subunit-header {
+        grid-template-columns: 1fr;
+      }
+
+      .big-number {
+        width: 50px;
+        height: 50px;
+        border-radius: 18px;
+      }
+
+      .theme-top,
+      .audio-first-box,
+      .test-area {
+        padding: 18px;
+      }
+
+      .drop-blocks {
+        padding: 0 18px 18px;
+      }
+
+      .answer-panel {
+        margin: 0 18px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>General English Listening Practice</span>
+      </div>
+
+      <div class="lang-switch" aria-label="Language switcher">
+        <button class="lang-btn active" type="button" data-lang="kk">KZ</button>
+        <button class="lang-btn" type="button" data-lang="ru">RU</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div
+        class="hero-badge"
+        data-kk="Listening бөлімі"
+        data-ru="Раздел Listening"
+      >
+        Listening бөлімі
+      </div>
+
+      <h1
+        data-kk="Адам, қоғам және рухани құндылық"
+        data-ru="Человек, общество и духовные ценности"
+      >
+        Адам, қоғам және рухани құндылық
+      </h1>
+
+      <div class="english-title">
+        human, society and spiritual values
+      </div>
+
+      <p
+        data-kk="Бұл сайт магистратураға түсу емтиханындағы Listening бөліміне дайындалуға арналған. Тест сұрақтары, жауап нұсқалары, transcript және vocabulary ағылшын тілінде беріледі. Аударма, нұсқаулық, нәтиже және түсіндірмелер KZ/RU режиміне қарай өзгереді."
+        data-ru="Этот сайт предназначен для подготовки к разделу Listening вступительного экзамена в магистратуру. Вопросы, варианты ответов, transcript и vocabulary остаются на английском языке. Перевод, инструкции, результат и объяснения меняются в режиме KZ/RU."
+      >
+        Бұл сайт магистратураға түсу емтиханындағы Listening бөліміне дайындалуға арналған. Тест сұрақтары, жауап нұсқалары, transcript және vocabulary ағылшын тілінде беріледі. Аударма, нұсқаулық, нәтиже және түсіндірмелер KZ/RU режиміне қарай өзгереді.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div
+            class="eyebrow"
+            data-kk="Unit ішіндегі бөлімдер"
+            data-ru="Разделы внутри Unit"
+          >
+            Unit ішіндегі бөлімдер
+          </div>
+
+          <h2
+            data-kk="Осы сайттағы 5 sub-unit"
+            data-ru="5 sub-units на этом сайте"
+          >
+            Осы сайттағы 5 sub-unit
+          </h2>
+        </div>
+
+        <p
+          class="muted"
+          data-kk="Қажетті sub-unit карточкасын бассаңыз, сайт сол бөлімге бірден өтеді."
+          data-ru="Нажмите на нужную карточку sub-unit, и сайт сразу перейдёт к этому разделу."
+        >
+          Қажетті sub-unit карточкасын бассаңыз, сайт сол бөлімге бірден өтеді.
+        </p>
+      </div>
+
+      <div class="subunit-grid">
+        <a class="subunit-card" href="#subunit-1">
+          <div class="subunit-number">01</div>
+          <div>
+            <strong>My friends and I. My home</strong>
+            <span
+              data-kk="Мен және менің достарым. Менің үйім"
+              data-ru="Я и мои друзья. Мой дом"
+            >
+              Мен және менің достарым. Менің үйім
+            </span>
+          </div>
+        </a>
+
+        <a class="subunit-card" href="#subunit-2">
+          <div class="subunit-number">02</div>
+          <div>
+            <strong>Marriage and family. Family values</strong>
+            <span
+              data-kk="Неке және отбасы. Отбасы өмірінің құндылықтары"
+              data-ru="Брак и семья. Семейные ценности"
+            >
+              Неке және отбасы. Отбасы өмірінің құндылықтары
+            </span>
+          </div>
+        </a>
+
+        <a class="subunit-card" href="#subunit-3">
+          <div class="subunit-number">03</div>
+          <div>
+            <strong>Profession. Work. Work discipline</strong>
+            <span
+              data-kk="Мамандық. Жұмыс. Еңбек тәртібі"
+              data-ru="Профессия. Работа. Трудовая дисциплина"
+            >
+              Мамандық. Жұмыс. Еңбек тәртібі
+            </span>
+          </div>
+        </a>
+
+        <a class="subunit-card" href="#subunit-4">
+          <div class="subunit-number">04</div>
+          <div>
+            <strong>Travel. Free time and interests</strong>
+            <span
+              data-kk="Саяхат. Бос уақыт және қызығушылық"
+              data-ru="Путешествия. Свободное время и интересы"
+            >
+              Саяхат. Бос уақыт және қызығушылық
+            </span>
+          </div>
+        </a>
+
+        <a class="subunit-card" href="#subunit-5">
+          <div class="subunit-number">05</div>
+          <div>
+            <strong>Healthy lifestyle. Health and sport</strong>
+            <span
+              data-kk="Салауатты өмір салты. Денсаулық және спорт"
+              data-ru="Здоровый образ жизни. Здоровье и спорт"
+            >
+              Салауатты өмір салты. Денсаулық және спорт
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="subunit-block" id="subunit-1">
+      <div class="subunit-header">
+        <div class="big-number">01</div>
+
+        <div>
+          <div class="eyebrow">Sub-unit 1</div>
+          <div class="subunit-title-en">My friends and I. My home</div>
+          <div
+            class="subunit-title-local"
+            data-kk="Мен және менің достарым. Менің үйім"
+            data-ru="Я и мои друзья. Мой дом"
+          >
+            Мен және менің достарым. Менің үйім
+          </div>
+        </div>
+      </div>
+
+      <article class="theme-card" id="audio-1">
+        <div class="theme-top">
+          <div
+            class="theme-label"
+            data-kk="Theme 1 / Бірінші тақырып"
+            data-ru="Theme 1 / Первая тема"
+          >
+            Theme 1 / Бірінші тақырып
+          </div>
+
+          <div class="theme-title">My friends and I</div>
+
+          <div
+            class="theme-local"
+            data-kk="Мен және менің достарым"
+            data-ru="Я и мои друзья"
+          >
+            Мен және менің достарым
+          </div>
+        </div>
+
+        <div class="audio-first-box">
+          <h4>Audio</h4>
+          <audio controls preload="metadata">
+            <source src="1.m4a" type="audio/mp4">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div class="test-area" data-test="audio1">
+          <div
+            class="instruction"
+            data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады."
+            data-ru="Прослушайте аудио и ответьте на 8 вопросов. Аудио можно слушать несколько раз."
+          >
+            Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады.
+          </div>
+
+          <div class="question" data-correct="B">
+            <div class="question-title">1. What does the teacher ask the students to do?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q1" value="A"> A. Open their books and read the text</label>
+              <label class="option"><input type="radio" name="a1q1" value="B"> B. Turn to the people next to them and introduce themselves</label>
+              <label class="option"><input type="radio" name="a1q1" value="C"> C. Write down the important information</label>
+              <label class="option"><input type="radio" name="a1q1" value="D"> D. Choose their university subjects immediately</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="C">
+            <div class="question-title">2. Where is Cara from?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q2" value="A"> A. Manchester</label>
+              <label class="option"><input type="radio" name="a1q2" value="B"> B. Leeds</label>
+              <label class="option"><input type="radio" name="a1q2" value="C"> C. Glasgow</label>
+              <label class="option"><input type="radio" name="a1q2" value="D"> D. London</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="A">
+            <div class="question-title">3. Why does Robert say he is half Scottish?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q3" value="A"> A. His mum is from near Glasgow</label>
+              <label class="option"><input type="radio" name="a1q3" value="B"> B. His dad works in Scotland</label>
+              <label class="option"><input type="radio" name="a1q3" value="C"> C. He studies Scottish history</label>
+              <label class="option"><input type="radio" name="a1q3" value="D"> D. He grew up in Glasgow</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="D">
+            <div class="question-title">4. Where does Robert live?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q4" value="A"> A. In Glasgow</label>
+              <label class="option"><input type="radio" name="a1q4" value="B"> B. In Leeds</label>
+              <label class="option"><input type="radio" name="a1q4" value="C"> C. Near London</label>
+              <label class="option"><input type="radio" name="a1q4" value="D"> D. Near Manchester</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="B">
+            <div class="question-title">5. Where did Selim grow up?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q5" value="A"> A. In Leeds</label>
+              <label class="option"><input type="radio" name="a1q5" value="B"> B. Near London</label>
+              <label class="option"><input type="radio" name="a1q5" value="C"> C. In Glasgow</label>
+              <label class="option"><input type="radio" name="a1q5" value="D"> D. Near Manchester</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="A">
+            <div class="question-title">6. What subject is Selim studying with history?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q6" value="A"> A. German</label>
+              <label class="option"><input type="radio" name="a1q6" value="B"> B. French</label>
+              <label class="option"><input type="radio" name="a1q6" value="C"> C. Maths</label>
+              <label class="option"><input type="radio" name="a1q6" value="D"> D. Science</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="C">
+            <div class="question-title">7. What subject is Robert studying with history?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q7" value="A"> A. French</label>
+              <label class="option"><input type="radio" name="a1q7" value="B"> B. German</label>
+              <label class="option"><input type="radio" name="a1q7" value="C"> C. Maths</label>
+              <label class="option"><input type="radio" name="a1q7" value="D"> D. English</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="B">
+            <div class="question-title">8. Why did Selim choose German?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a1q8" value="A"> A. He grew up in Germany</label>
+              <label class="option"><input type="radio" name="a1q8" value="B"> B. He thought German was easier than French</label>
+              <label class="option"><input type="radio" name="a1q8" value="C"> C. His friends advised him to take German</label>
+              <label class="option"><input type="radio" name="a1q8" value="D"> D. German helps him remember dates</label>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button
+              class="check-btn"
+              type="button"
+              onclick="checkTest('audio1')"
+              data-kk="Show result"
+              data-ru="Show result"
+            >
+              Show result
+            </button>
+
+            <div class="result-box" id="result-audio1"></div>
+          </div>
+        </div>
+
+        <div class="drop-blocks">
+          <details class="drop-card">
+            <summary>Transcript</summary>
+            <div class="drop-content transcript">Teacher: So, now you've got the important information, it's time to meet each other. Everyone turn to the people next to you and introduce yourselves.
+
+Cara: So, hi. I'm Cara. And you are?
+
+Robert: Robert.
+
+Selim: Selim.
+
+Cara: Nice to meet you!
+
+Robert and Selim: You too.
+
+Robert: Nice accent. Where are you from?
+
+Cara: I'm from Glasgow.
+
+Robert: Oh, really? My mum's from near Glasgow, so I'm half Scottish.
+
+Cara: Cool. Do you live in Scotland?
+
+Robert: No, we live in England, near Manchester. My dad's from there. What about you, Selim?
+
+Selim: I'm from Leeds originally but I grew up near London.
+
+Cara: Are you both doing history on its own?
+
+Selim: No. I'm doing history and German.
+
+Robert: I'm doing it with maths, actually.
+
+Selim: History and maths. That's different!
+
+Robert: Yeah, I couldn't decide between arts and sciences. Maths doesn't help with remembering dates, though! And you?
+
+Cara: I'm doing history and French.
+
+Selim: I wanted to do French but German was easier, so I took that.
+
+Cara: German is so hard!</div>
+          </details>
+
+          <details class="drop-card">
+            <summary>Translation</summary>
+            <div
+              class="drop-content translation"
+              data-kk="Мұғалім: Сонымен, енді сіздер маңызды ақпаратты алдыңыздар, бір-біріңізбен танысатын уақыт келді. Қасыңыздағы адамдарға бұрылып, өздеріңізді таныстырыңыздар.
+
+Кара: Сәлем. Менің атым Кара. Ал сендер?
+
+Роберт: Роберт.
+
+Селим: Селим.
+
+Кара: Танысқаныма қуаныштымын!
+
+Роберт және Селим: Біз де қуаныштымыз.
+
+Роберт: Акцентің жақсы екен. Қайдансың?
+
+Кара: Мен Глазгоданмын.
+
+Роберт: Рас па? Менің анам Глазгоға жақын жерден, сондықтан мен жартылай шотландпын.
+
+Кара: Керемет. Сен Шотландияда тұрасың ба?
+
+Роберт: Жоқ, біз Англияда, Манчестерге жақын жерде тұрамыз. Әкем сол жақтан. Ал сен ше, Селим?
+
+Селим: Негізі мен Лидстенмін, бірақ Лондонға жақын жерде өстім.
+
+Кара: Екеуің де тарихты жеке пән ретінде оқып жүрсіңдер ме?
+
+Селим: Жоқ. Мен тарих пен неміс тілін оқып жүрмін.
+
+Роберт: Ал мен тарихты математикамен бірге оқимын.
+
+Селим: Тарих және математика. Бұл ерекше екен!
+
+Роберт: Иә, мен өнер саласы мен ғылым саласының бірін таңдай алмадым. Бірақ математика даталарды есте сақтауға көмектеспейді! Ал сен ше?
+
+Кара: Мен тарих пен француз тілін оқып жүрмін.
+
+Селим: Мен француз тілін оқығым келген, бірақ неміс тілі жеңілірек болды, сондықтан соны таңдадым.
+
+Кара: Неміс тілі өте қиын ғой!"
+              data-ru="Учитель: Итак, теперь вы получили важную информацию, пора познакомиться друг с другом. Повернитесь к людям рядом с вами и представьтесь.
+
+Кара: Привет. Я Кара. А вы?
+
+Роберт: Роберт.
+
+Селим: Селим.
+
+Кара: Приятно познакомиться!
+
+Роберт и Селим: Нам тоже.
+
+Роберт: Хороший акцент. Откуда ты?
+
+Кара: Я из Глазго.
+
+Роберт: Правда? Моя мама из места недалеко от Глазго, поэтому я наполовину шотландец.
+
+Кара: Классно. Ты живёшь в Шотландии?
+
+Роберт: Нет, мы живём в Англии, недалеко от Манчестера. Мой папа оттуда. А ты, Селим?
+
+Селим: Вообще я из Лидса, но вырос недалеко от Лондона.
+
+Кара: Вы оба изучаете только историю?
+
+Селим: Нет. Я изучаю историю и немецкий.
+
+Роберт: А я, вообще-то, изучаю её вместе с математикой.
+
+Селим: История и математика. Это необычно!
+
+Роберт: Да, я не мог выбрать между гуманитарными и естественными науками. Правда, математика не помогает запоминать даты! А ты?
+
+Кара: Я изучаю историю и французский.
+
+Селим: Я хотел изучать французский, но немецкий был легче, поэтому я выбрал его.
+
+Кара: Немецкий такой сложный!"
+            >
+              Мұғалім: Сонымен, енді сіздер маңызды ақпаратты алдыңыздар, бір-біріңізбен танысатын уақыт келді. Қасыңыздағы адамдарға бұрылып, өздеріңізді таныстырыңыздар.
+
+Кара: Сәлем. Менің атым Кара. Ал сендер?
+
+Роберт: Роберт.
+
+Селим: Селим.
+
+Кара: Танысқаныма қуаныштымын!
+
+Роберт және Селим: Біз де қуаныштымыз.
+
+Роберт: Акцентің жақсы екен. Қайдансың?
+
+Кара: Мен Глазгоданмын.
+
+Роберт: Рас па? Менің анам Глазгоға жақын жерден, сондықтан мен жартылай шотландпын.
+
+Кара: Керемет. Сен Шотландияда тұрасың ба?
+
+Роберт: Жоқ, біз Англияда, Манчестерге жақын жерде тұрамыз. Әкем сол жақтан. Ал сен ше, Селим?
+
+Селим: Негізі мен Лидстенмін, бірақ Лондонға жақын жерде өстім.
+
+Кара: Екеуің де тарихты жеке пән ретінде оқып жүрсіңдер ме?
+
+Селим: Жоқ. Мен тарих пен неміс тілін оқып жүрмін.
+
+Роберт: Ал мен тарихты математикамен бірге оқимын.
+
+Селим: Тарих және математика. Бұл ерекше екен!
+
+Роберт: Иә, мен өнер саласы мен ғылым саласының бірін таңдай алмадым. Бірақ математика даталарды есте сақтауға көмектеспейді! Ал сен ше?
+
+Кара: Мен тарих пен француз тілін оқып жүрмін.
+
+Селим: Мен француз тілін оқығым келген, бірақ неміс тілі жеңілірек болды, сондықтан соны таңдадым.
+
+Кара: Неміс тілі өте қиын ғой!
+            </div>
+          </details>
+
+          <details class="drop-card">
+            <summary>Vocabulary</summary>
+            <div class="drop-content">
+              <ul class="vocab-list">
+                <li><strong>to introduce yourself</strong> — <span data-kk="өзіңді таныстыру" data-ru="представиться">өзіңді таныстыру</span></li>
+                <li><strong>accent</strong> — <span data-kk="акцент, сөйлеу мәнері" data-ru="акцент, манера произношения">акцент, сөйлеу мәнері</span></li>
+                <li><strong>originally</strong> — <span data-kk="негізі, бастапқыда" data-ru="изначально, вообще-то">негізі, бастапқыда</span></li>
+                <li><strong>to grow up</strong> — <span data-kk="өсу, ержету" data-ru="вырасти, взрослеть">өсу, ержету</span></li>
+                <li><strong>on its own</strong> — <span data-kk="жеке, бөлек" data-ru="само по себе, отдельно">жеке, бөлек</span></li>
+                <li><strong>to decide between</strong> — <span data-kk="екі нәрсенің бірін таңдау" data-ru="выбирать между чем-либо">екі нәрсенің бірін таңдау</span></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="answer-panel" id="answers-audio1">
+          <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
+          <ul class="explanation-list">
+            <li><strong>1 — B.</strong> <span data-kk="Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады." data-ru="Учитель просит студентов повернуться к людям рядом и представиться.">Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады.</span></li>
+            <li><strong>2 — C.</strong> <span data-kk="Кара өзінің Глазгодан екенін айтады." data-ru="Кара говорит, что она из Глазго.">Кара өзінің Глазгодан екенін айтады.</span></li>
+            <li><strong>3 — A.</strong> <span data-kk="Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді." data-ru="Роберт говорит, что его мама из места рядом с Глазго, поэтому он наполовину шотландец.">Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді.</span></li>
+            <li><strong>4 — D.</strong> <span data-kk="Роберт Англияда, Манчестерге жақын жерде тұратынын айтады." data-ru="Роберт говорит, что живёт в Англии, недалеко от Манчестера.">Роберт Англияда, Манчестерге жақын жерде тұратынын айтады.</span></li>
+            <li><strong>5 — B.</strong> <span data-kk="Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады." data-ru="Селим говорит, что он из Лидса, но вырос рядом с Лондоном.">Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады.</span></li>
+            <li><strong>6 — A.</strong> <span data-kk="Селим тарих пен неміс тілін оқып жүр." data-ru="Селим изучает историю и немецкий.">Селим тарих пен неміс тілін оқып жүр.</span></li>
+            <li><strong>7 — C.</strong> <span data-kk="Роберт тарихты математикамен бірге оқитынын айтады." data-ru="Роберт говорит, что изучает историю вместе с математикой.">Роберт тарихты математикамен бірге оқитынын айтады.</span></li>
+            <li><strong>8 — B.</strong> <span data-kk="Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған." data-ru="Селим хотел французский, но выбрал немецкий, потому что он был легче.">Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="theme-card" id="audio-2">
+        <div class="theme-top">
+          <div
+            class="theme-label"
+            data-kk="Theme 2 / Екінші тақырып"
+            data-ru="Theme 2 / Вторая тема"
+          >
+            Theme 2 / Екінші тақырып
+          </div>
+
+          <div class="theme-title">My home</div>
+
+          <div
+            class="theme-local"
+            data-kk="Менің үйім"
+            data-ru="Мой дом"
+          >
+            Менің үйім
+          </div>
+        </div>
+
+        <div class="audio-first-box">
+          <h4>Audio</h4>
+          <audio controls preload="metadata">
+            <source src="1.2.m4a" type="audio/mp4">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div class="test-area" data-test="audio2">
+          <div
+            class="instruction"
+            data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Сұрақтар мен жауап нұсқалары ағылшын тілінде берілген."
+            data-ru="Прослушайте аудио и ответьте на 8 вопросов. Вопросы и варианты ответов даны на английском языке."
+          >
+            Аудионы тыңдап, 8 сұраққа жауап беріңіз. Сұрақтар мен жауап нұсқалары ағылшын тілінде берілген.
+          </div>
+
+          <div class="question" data-correct="C">
+            <div class="question-title">1. What is the speaker’s favourite room?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q1" value="A"> A. The bedroom</label>
+              <label class="option"><input type="radio" name="a2q1" value="B"> B. The kitchen</label>
+              <label class="option"><input type="radio" name="a2q1" value="C"> C. The living room</label>
+              <label class="option"><input type="radio" name="a2q1" value="D"> D. The study room</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="A">
+            <div class="question-title">2. How does the speaker describe the room?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q2" value="A"> A. Small but very cozy</label>
+              <label class="option"><input type="radio" name="a2q2" value="B"> B. Large and expensive</label>
+              <label class="option"><input type="radio" name="a2q2" value="C"> C. Dark but modern</label>
+              <label class="option"><input type="radio" name="a2q2" value="D"> D. Bright and empty</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="D">
+            <div class="question-title">3. What is in the corner of the living room?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q3" value="A"> A. A television and a lamp</label>
+              <label class="option"><input type="radio" name="a2q3" value="B"> B. A big table with candles</label>
+              <label class="option"><input type="radio" name="a2q3" value="C"> C. A sofa with cushions</label>
+              <label class="option"><input type="radio" name="a2q3" value="D"> D. A small bookshelf with books and plants</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="B">
+            <div class="question-title">4. What does the speaker think plants do?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q4" value="A"> A. They make the room look bigger</label>
+              <label class="option"><input type="radio" name="a2q4" value="B"> B. They make the room look nice</label>
+              <label class="option"><input type="radio" name="a2q4" value="C"> C. They make the room feel cold</label>
+              <label class="option"><input type="radio" name="a2q4" value="D"> D. They make the room expensive</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="A">
+            <div class="question-title">5. What is the best thing in the speaker’s living room?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q5" value="A"> A. The sofa</label>
+              <label class="option"><input type="radio" name="a2q5" value="B"> B. The bookshelf</label>
+              <label class="option"><input type="radio" name="a2q5" value="C"> C. The small table</label>
+              <label class="option"><input type="radio" name="a2q5" value="D"> D. The pictures</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="C">
+            <div class="question-title">6. What does the speaker usually put on the small table?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q6" value="A"> A. Books or plants</label>
+              <label class="option"><input type="radio" name="a2q6" value="B"> B. A phone or a laptop</label>
+              <label class="option"><input type="radio" name="a2q6" value="C"> C. Tea or some candles</label>
+              <label class="option"><input type="radio" name="a2q6" value="D"> D. Pictures or cushions</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="D">
+            <div class="question-title">7. What does the speaker do when alone?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q7" value="A"> A. Talks with friends</label>
+              <label class="option"><input type="radio" name="a2q7" value="B"> B. Cleans the room</label>
+              <label class="option"><input type="radio" name="a2q7" value="C"> C. Studies German</label>
+              <label class="option"><input type="radio" name="a2q7" value="D"> D. Watches TV or reads a book</label>
+            </div>
+          </div>
+
+          <div class="question" data-correct="B">
+            <div class="question-title">8. What is the speaker’s main idea about a living room?</div>
+            <div class="options">
+              <label class="option"><input type="radio" name="a2q8" value="A"> A. It should have many expensive things</label>
+              <label class="option"><input type="radio" name="a2q8" value="B"> B. It should be comfortable and relaxing</label>
+              <label class="option"><input type="radio" name="a2q8" value="C"> C. It should be large and modern</label>
+              <label class="option"><input type="radio" name="a2q8" value="D"> D. It should be used only for guests</label>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button
+              class="check-btn"
+              type="button"
+              onclick="checkTest('audio2')"
+              data-kk="Show result"
+              data-ru="Show result"
+            >
+              Show result
+            </button>
+
+            <div class="result-box" id="result-audio2"></div>
+          </div>
+        </div>
+
+        <div class="drop-blocks">
+          <details class="drop-card">
+            <summary>Transcript</summary>
+            <div class="drop-content transcript">My favourite room is the living room. It's small but very cozy. The walls are light and I've got some pictures on them. There's a small bookshelf in the corner with books and plants. I think plants make the room look nice. The best thing in my living room is the sofa. It's big and soft with some cushions and a warm blanket in front of it. There's a small table. I usually put my tea or some candles on it. In the evening, I turn on small lights. They make the room feel warm. I love this room because it's good for relaxing. When I'm alone, I watch TV or read a book. When my friends visit, we sit on the sofa and talk. I think a living room should feel comfortable and relaxing. It doesn't need to be big and you don't need lots of expensive things. It should just be a place where you feel happy and relaxed.</div>
+          </details>
+
+          <details class="drop-card">
+            <summary>Translation</summary>
+            <div
+              class="drop-content translation"
+              data-kk="Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек."
+              data-ru="Моя любимая комната — гостиная. Она маленькая, но очень уютная. Стены светлые, и на них есть несколько картин. В углу стоит небольшая книжная полка с книгами и растениями. Я думаю, растения делают комнату красивой. Самая лучшая вещь в моей гостиной — диван. Он большой и мягкий, с подушками и тёплым пледом перед ним. Там есть маленький столик. Обычно я ставлю на него чай или несколько свечей. Вечером я включаю маленькие огни. Они делают комнату тёплой и уютной. Я люблю эту комнату, потому что она хорошо подходит для отдыха. Когда я одна, я смотрю телевизор или читаю книгу. Когда приходят мои друзья, мы сидим на диване и разговариваем. Я думаю, гостиная должна быть удобной и расслабляющей. Она не обязана быть большой, и в ней не нужно много дорогих вещей. Это просто должно быть место, где ты чувствуешь себя счастливым и спокойным."
+            >
+              Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек.
+            </div>
+          </details>
+
+          <details class="drop-card">
+            <summary>Vocabulary</summary>
+            <div class="drop-content">
+              <ul class="vocab-list">
+                <li><strong>living room</strong> — <span data-kk="қонақ бөлме" data-ru="гостиная">қонақ бөлме</span></li>
+                <li><strong>cozy</strong> — <span data-kk="жайлы, ыңғайлы" data-ru="уютный">жайлы, ыңғайлы</span></li>
+                <li><strong>bookshelf</strong> — <span data-kk="кітап сөресі" data-ru="книжная полка">кітап сөресі</span></li>
+                <li><strong>plants</strong> — <span data-kk="өсімдіктер" data-ru="растения">өсімдіктер</span></li>
+                <li><strong>cushions</strong> — <span data-kk="диван жастықтары" data-ru="диванные подушки">диван жастықтары</span></li>
+                <li><strong>blanket</strong> — <span data-kk="көрпе" data-ru="плед, одеяло">көрпе</span></li>
+                <li><strong>candles</strong> — <span data-kk="шамдар" data-ru="свечи">шамдар</span></li>
+                <li><strong>comfortable</strong> — <span data-kk="ыңғайлы, жайлы" data-ru="удобный, комфортный">ыңғайлы, жайлы</span></li>
+                <li><strong>relaxing</strong> — <span data-kk="тыныштандыратын, демалдыратын" data-ru="расслабляющий">тыныштандыратын, демалдыратын</span></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="answer-panel" id="answers-audio2">
+          <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
+          <ul class="explanation-list">
+            <li><strong>1 — C.</strong> <span data-kk="Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады." data-ru="Говорящий говорит, что его любимая комната — гостиная.">Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады.</span></li>
+            <li><strong>2 — A.</strong> <span data-kk="Бөлме кішкентай, бірақ өте жайлы деп сипатталады." data-ru="Комната описывается как маленькая, но очень уютная.">Бөлме кішкентай, бірақ өте жайлы деп сипатталады.</span></li>
+            <li><strong>3 — D.</strong> <span data-kk="Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр." data-ru="В углу стоит маленькая книжная полка с книгами и растениями.">Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр.</span></li>
+            <li><strong>4 — B.</strong> <span data-kk="Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді." data-ru="По мнению говорящего, растения делают комнату красивой.">Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді.</span></li>
+            <li><strong>5 — A.</strong> <span data-kk="Қонақ бөлмедегі ең жақсы нәрсе — диван." data-ru="Самая лучшая вещь в гостиной — диван.">Қонақ бөлмедегі ең жақсы нәрсе — диван.</span></li>
+            <li><strong>6 — C.</strong> <span data-kk="Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады." data-ru="Говорящий говорит, что обычно ставит на столик чай или свечи.">Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады.</span></li>
+            <li><strong>7 — D.</strong> <span data-kk="Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды." data-ru="Когда говорящий один, он смотрит телевизор или читает книгу.">Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды.</span></li>
+            <li><strong>8 — B.</strong> <span data-kk="Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек." data-ru="Главная мысль: гостиная должна быть удобной и расслабляющей.">Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек.</span></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      let currentLang = "kk";
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll("[data-kk][data-ru]").forEach((element) => {
+          const text = element.getAttribute(`data-${lang}`);
+          if (text !== null) {
+            element.textContent = text;
+          }
+        });
+
+        document.querySelectorAll(".lang-btn").forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
+        });
+      }
+
+      document.querySelectorAll(".lang-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          setLanguage(button.dataset.lang);
+        });
+      });
+
+      function checkTest(testId) {
+        const testArea = document.querySelector(`[data-test="${testId}"]`);
+        const questions = testArea.querySelectorAll(".question");
+        const resultBox = document.getElementById(`result-${testId}`);
+        const answerPanel = document.getElementById(`answers-${testId}`);
+
+        let score = 0;
+
+        questions.forEach((question) => {
+          const correctAnswer = question.dataset.correct;
+          const selected = question.querySelector("input[type='radio']:checked");
+
+          question.querySelectorAll(".option").forEach((option) => {
+            option.classList.remove("correct", "wrong");
+
+            const input = option.querySelector("input");
+            if (input.value === correctAnswer) {
+              option.classList.add("correct");
+            }
+
+            if (selected && input.checked && input.value !== correctAnswer) {
+              option.classList.add("wrong");
+            }
+          });
+
+          if (selected && selected.value === correctAnswer) {
+            score++;
+          }
+        });
+
+        const total = questions.length;
+
+        if (currentLang === "kk") {
+          resultBox.textContent = `Сіздің нәтижеңіз: ${score} / ${total}`;
+        } else {
+          resultBox.textContent = `Ваш результат: ${score} / ${total}`;
+        }
+
+        resultBox.style.display = "inline-flex";
+
+        if (answerPanel) {
+          answerPanel.style.display = "block";
+        }
+
+        setLanguage(currentLang);
+      }
+
+      setLanguage("kk");
+    </script>
