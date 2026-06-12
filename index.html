@@ -200,14 +200,6 @@
       font-size: clamp(24px, 3vw, 34px);
     }
 
-    h3 {
-      font-size: clamp(22px, 2.6vw, 32px);
-    }
-
-    h4 {
-      font-size: 20px;
-    }
-
     .muted {
       color: var(--muted);
     }
@@ -328,7 +320,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .chip {
@@ -344,10 +336,10 @@
     }
 
     .audio-box {
-      padding: 20px;
+      padding: 16px;
       margin-bottom: 22px;
       border: 1px solid var(--border);
-      border-radius: 26px;
+      border-radius: 24px;
       background: #f8f8ff;
     }
 
@@ -495,8 +487,7 @@
       font-size: 15.5px;
     }
 
-    .vocab-list,
-    .explanation-list {
+    .vocab-list {
       display: grid;
       gap: 10px;
       padding: 0;
@@ -504,23 +495,17 @@
       list-style: none;
     }
 
-    .vocab-list li,
-    .explanation-list li {
+    .vocab-list li {
       padding: 12px 14px;
       border-radius: 14px;
       background: #fbfcff;
       border: 1px solid var(--border);
     }
 
-    .vocab-list strong,
-    .explanation-list strong {
-      color: var(--text);
-    }
-
     .answer-panel {
       display: none;
       margin-top: 18px;
-      padding: 19px;
+      padding: 16px;
       border-radius: 20px;
       border: 1px solid rgba(16, 185, 129, 0.25);
       background: #ecfdf5;
@@ -529,6 +514,32 @@
     .answer-panel h4 {
       margin-bottom: 12px;
       color: #047857;
+    }
+
+    .answer-item {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--border);
+      margin-bottom: 10px;
+    }
+
+    .answer-item strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .answer-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-bottom: 8px;
+    }
+
+    .answer-item p {
+      margin: 4px 0;
+      font-size: 14px;
     }
 
     @media (max-width: 960px) {
@@ -645,11 +656,7 @@
     </header>
 
     <section class="hero">
-      <div
-        class="hero-badge"
-        data-kk="Listening бөлімі"
-        data-ru="Раздел Listening"
-      >
+      <div class="hero-badge" data-kk="Listening бөлімі" data-ru="Раздел Listening">
         Listening бөлімі
       </div>
 
@@ -660,9 +667,7 @@
         Адам, қоғам және рухани құндылық
       </h1>
 
-      <div class="english-title">
-        human, society and spiritual values
-      </div>
+      <div class="english-title">human, society and spiritual values</div>
 
       <p
         data-kk="Бұл сайт магистратураға түсу емтиханындағы Listening бөліміне дайындалуға арналған. Тест сұрақтары, жауап нұсқалары, transcript және vocabulary ағылшын тілінде беріледі. Аударма, нұсқаулық, нәтиже және түсіндірмелер KZ/RU режиміне қарай өзгереді."
@@ -675,18 +680,11 @@
     <section class="section">
       <div class="section-head">
         <div>
-          <div
-            class="eyebrow"
-            data-kk="Unit ішіндегі бөлімдер"
-            data-ru="Разделы внутри Unit"
-          >
+          <div class="eyebrow" data-kk="Unit ішіндегі бөлімдер" data-ru="Разделы внутри Unit">
             Unit ішіндегі бөлімдер
           </div>
 
-          <h2
-            data-kk="Осы сайттағы 5 sub-unit"
-            data-ru="5 sub-units на этом сайте"
-          >
+          <h2 data-kk="Осы сайттағы 5 sub-unit" data-ru="5 sub-units на этом сайте">
             Осы сайттағы 5 sub-unit
           </h2>
         </div>
@@ -705,10 +703,7 @@
           <div class="subunit-number">01</div>
           <div>
             <strong>My friends and I. My home</strong>
-            <span
-              data-kk="Мен және менің достарым. Менің үйім"
-              data-ru="Я и мои друзья. Мой дом"
-            >
+            <span data-kk="Мен және менің достарым. Менің үйім" data-ru="Я и мои друзья. Мой дом">
               Мен және менің достарым. Менің үйім
             </span>
           </div>
@@ -718,10 +713,7 @@
           <div class="subunit-number">02</div>
           <div>
             <strong>Marriage and family. Family values</strong>
-            <span
-              data-kk="Неке және отбасы. Отбасы өмірінің құндылықтары"
-              data-ru="Брак и семья. Семейные ценности"
-            >
+            <span data-kk="Неке және отбасы. Отбасы өмірінің құндылықтары" data-ru="Брак и семья. Семейные ценности">
               Неке және отбасы. Отбасы өмірінің құндылықтары
             </span>
           </div>
@@ -731,10 +723,7 @@
           <div class="subunit-number">03</div>
           <div>
             <strong>Profession. Work. Work discipline</strong>
-            <span
-              data-kk="Мамандық. Жұмыс. Еңбек тәртібі"
-              data-ru="Профессия. Работа. Трудовая дисциплина"
-            >
+            <span data-kk="Мамандық. Жұмыс. Еңбек тәртібі" data-ru="Профессия. Работа. Трудовая дисциплина">
               Мамандық. Жұмыс. Еңбек тәртібі
             </span>
           </div>
@@ -744,10 +733,7 @@
           <div class="subunit-number">04</div>
           <div>
             <strong>Travel. Free time and interests</strong>
-            <span
-              data-kk="Саяхат. Бос уақыт және қызығушылық"
-              data-ru="Путешествия. Свободное время и интересы"
-            >
+            <span data-kk="Саяхат. Бос уақыт және қызығушылық" data-ru="Путешествия. Свободное время и интересы">
               Саяхат. Бос уақыт және қызығушылық
             </span>
           </div>
@@ -757,10 +743,7 @@
           <div class="subunit-number">05</div>
           <div>
             <strong>Healthy lifestyle. Health and sport</strong>
-            <span
-              data-kk="Салауатты өмір салты. Денсаулық және спорт"
-              data-ru="Здоровый образ жизни. Здоровье и спорт"
-            >
+            <span data-kk="Салауатты өмір салты. Денсаулық және спорт" data-ru="Здоровый образ жизни. Здоровье и спорт">
               Салауатты өмір салты. Денсаулық және спорт
             </span>
           </div>
@@ -775,11 +758,7 @@
         <div>
           <div class="eyebrow">Sub-unit 1</div>
           <div class="subunit-title-en">My friends and I. My home</div>
-          <div
-            class="subunit-title-local"
-            data-kk="Мен және менің достарым. Менің үйім"
-            data-ru="Я и мои друзья. Мой дом"
-          >
+          <div class="subunit-title-local" data-kk="Мен және менің достарым. Менің үйім" data-ru="Я и мои друзья. Мой дом">
             Мен және менің достарым. Менің үйім
           </div>
         </div>
@@ -791,7 +770,6 @@
         <div class="chips">
           <div class="chip">Topic: Me and my friends</div>
           <div class="chip">Type: Dialogue</div>
-          <div class="chip">Audio: Фри.m4a</div>
         </div>
 
         <div class="audio-box">
@@ -804,21 +782,13 @@
         <div class="tabs">
           <button class="tab-btn active" type="button" onclick="openTab('audio1', 'test')">Test</button>
           <button class="tab-btn" type="button" onclick="openTab('audio1', 'transcript')">Transcript</button>
-          <button
-            class="tab-btn"
-            type="button"
-            onclick="openTab('audio1', 'translation')"
-            data-kk="Аударма"
-            data-ru="Перевод"
-          >
-            Аударма
-          </button>
+          <button class="tab-btn" type="button" onclick="openTab('audio1', 'translation')" data-kk="Аударма" data-ru="Перевод">Аударма</button>
           <button class="tab-btn" type="button" onclick="openTab('audio1', 'vocabulary')">Vocabulary</button>
         </div>
 
         <div class="tab-panel active" data-tab-group="audio1" data-tab-name="test">
-          <div class="instruction" data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады." data-ru="Прослушайте аудио и ответьте на 8 вопросов. Аудио можно слушать несколько раз.">
-            Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы қалағаныңызша бірнеше рет тыңдауға болады.
+          <div class="instruction" data-kk="Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы бірнеше рет тыңдауға болады." data-ru="Прослушайте аудио и ответьте на 8 вопросов. Аудио можно слушать несколько раз.">
+            Аудионы тыңдап, 8 сұраққа жауап беріңіз. Аудионы бірнеше рет тыңдауға болады.
           </div>
 
           <div class="test-area" data-test="audio1">
@@ -909,17 +879,79 @@
           </div>
 
           <div class="answer-panel" id="answers-audio1">
-            <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
-            <ul class="explanation-list">
-              <li><strong>1 — B.</strong> <span data-kk="Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады." data-ru="Учитель просит студентов повернуться к людям рядом и представиться.">Мұғалім студенттерге қасындағы адамдарға бұрылып, өздерін таныстыруды айтады.</span></li>
-              <li><strong>2 — C.</strong> <span data-kk="Кара өзінің Глазгодан екенін айтады." data-ru="Кара говорит, что она из Глазго.">Кара өзінің Глазгодан екенін айтады.</span></li>
-              <li><strong>3 — A.</strong> <span data-kk="Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді." data-ru="Роберт говорит, что его мама из места рядом с Глазго, поэтому он наполовину шотландец.">Роберт анасы Глазгоға жақын жерден екенін айтып, өзін жартылай шотландпын дейді.</span></li>
-              <li><strong>4 — D.</strong> <span data-kk="Роберт Англияда, Манчестерге жақын жерде тұратынын айтады." data-ru="Роберт говорит, что живёт в Англии, недалеко от Манчестера.">Роберт Англияда, Манчестерге жақын жерде тұратынын айтады.</span></li>
-              <li><strong>5 — B.</strong> <span data-kk="Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады." data-ru="Селим говорит, что он из Лидса, но вырос рядом с Лондоном.">Селим Лидстен екенін, бірақ Лондонға жақын жерде өскенін айтады.</span></li>
-              <li><strong>6 — A.</strong> <span data-kk="Селим тарих пен неміс тілін оқып жүр." data-ru="Селим изучает историю и немецкий.">Селим тарих пен неміс тілін оқып жүр.</span></li>
-              <li><strong>7 — C.</strong> <span data-kk="Роберт тарихты математикамен бірге оқитынын айтады." data-ru="Роберт говорит, что изучает историю вместе с математикой.">Роберт тарихты математикамен бірге оқитынын айтады.</span></li>
-              <li><strong>8 — B.</strong> <span data-kk="Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған." data-ru="Селим хотел французский, но выбрал немецкий, потому что он был легче.">Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болғандықтан соны таңдаған.</span></li>
-            </ul>
+            <h4 data-kk="Нәтиже және жауаптар" data-ru="Результат и ответы">Нәтиже және жауаптар</h4>
+
+            <div class="answer-item">
+              <strong>1. What does the teacher ask the students to do?</strong>
+              <small data-kk="Мұғалім студенттерден не істеуді сұрайды?" data-ru="Что учитель просит студентов сделать?">Мұғалім студенттерден не істеуді сұрайды?</small>
+              <p><b>Correct answer: B</b></p>
+              <p><b>Answer:</b> Turn to the people next to them and introduce themselves.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Қасындағы адамдарға бұрылып, өздерін таныстыру." data-ru="Повернуться к людям рядом и представиться.">Қасындағы адамдарға бұрылып, өздерін таныстыру.</span></p>
+              <p><b>Why:</b> <span data-kk="Мұғалім осы әрекетті тікелей айтады." data-ru="Учитель прямо говорит выполнить это действие.">Мұғалім осы әрекетті тікелей айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>2. Where is Cara from?</strong>
+              <small data-kk="Кара қайдан?" data-ru="Откуда Кара?">Кара қайдан?</small>
+              <p><b>Correct answer: C</b></p>
+              <p><b>Answer:</b> Glasgow.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Глазго." data-ru="Глазго.">Глазго.</span></p>
+              <p><b>Why:</b> <span data-kk="Кара “I’m from Glasgow” дейді." data-ru="Кара говорит: “I’m from Glasgow”.">Кара “I’m from Glasgow” дейді.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>3. Why does Robert say he is half Scottish?</strong>
+              <small data-kk="Роберт неге өзін жартылай шотландпын дейді?" data-ru="Почему Роберт говорит, что он наполовину шотландец?">Роберт неге өзін жартылай шотландпын дейді?</small>
+              <p><b>Correct answer: A</b></p>
+              <p><b>Answer:</b> His mum is from near Glasgow.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Оның анасы Глазгоға жақын жерден." data-ru="Его мама из места рядом с Глазго.">Оның анасы Глазгоға жақын жерден.</span></p>
+              <p><b>Why:</b> <span data-kk="Роберт анасы туралы айтады." data-ru="Роберт говорит о своей маме.">Роберт анасы туралы айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>4. Where does Robert live?</strong>
+              <small data-kk="Роберт қайда тұрады?" data-ru="Где живёт Роберт?">Роберт қайда тұрады?</small>
+              <p><b>Correct answer: D</b></p>
+              <p><b>Answer:</b> Near Manchester.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Манчестерге жақын жерде." data-ru="Недалеко от Манчестера.">Манчестерге жақын жерде.</span></p>
+              <p><b>Why:</b> <span data-kk="Ол Англияда, Манчестерге жақын тұратынын айтады." data-ru="Он говорит, что живёт в Англии, рядом с Манчестером.">Ол Англияда, Манчестерге жақын тұратынын айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>5. Where did Selim grow up?</strong>
+              <small data-kk="Селим қай жерде өсті?" data-ru="Где вырос Селим?">Селим қай жерде өсті?</small>
+              <p><b>Correct answer: B</b></p>
+              <p><b>Answer:</b> Near London.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Лондонға жақын жерде." data-ru="Недалеко от Лондона.">Лондонға жақын жерде.</span></p>
+              <p><b>Why:</b> <span data-kk="Селим Лондонға жақын жерде өскенін айтады." data-ru="Селим говорит, что вырос рядом с Лондоном.">Селим Лондонға жақын жерде өскенін айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>6. What subject is Selim studying with history?</strong>
+              <small data-kk="Селим тарихпен бірге қандай пән оқып жүр?" data-ru="Какой предмет Селим изучает вместе с историей?">Селим тарихпен бірге қандай пән оқып жүр?</small>
+              <p><b>Correct answer: A</b></p>
+              <p><b>Answer:</b> German.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Неміс тілі." data-ru="Немецкий язык.">Неміс тілі.</span></p>
+              <p><b>Why:</b> <span data-kk="Селим тарих пен неміс тілін оқитынын айтады." data-ru="Селим говорит, что изучает историю и немецкий.">Селим тарих пен неміс тілін оқитынын айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>7. What subject is Robert studying with history?</strong>
+              <small data-kk="Роберт тарихпен бірге қандай пән оқып жүр?" data-ru="Какой предмет Роберт изучает вместе с историей?">Роберт тарихпен бірге қандай пән оқып жүр?</small>
+              <p><b>Correct answer: C</b></p>
+              <p><b>Answer:</b> Maths.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Математика." data-ru="Математика.">Математика.</span></p>
+              <p><b>Why:</b> <span data-kk="Роберт тарихты математикамен бірге оқитынын айтады." data-ru="Роберт говорит, что изучает историю вместе с математикой.">Роберт тарихты математикамен бірге оқитынын айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>8. Why did Selim choose German?</strong>
+              <small data-kk="Селим неге неміс тілін таңдады?" data-ru="Почему Селим выбрал немецкий?">Селим неге неміс тілін таңдады?</small>
+              <p><b>Correct answer: B</b></p>
+              <p><b>Answer:</b> He thought German was easier than French.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Ол неміс тілі француз тілінен жеңілірек деп ойлады." data-ru="Он думал, что немецкий легче французского.">Ол неміс тілі француз тілінен жеңілірек деп ойлады.</span></p>
+              <p><b>Why:</b> <span data-kk="Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болған." data-ru="Селим хотел французский, но немецкий был легче.">Селим француз тілін қалаған, бірақ неміс тілі жеңілірек болған.</span></p>
+            </div>
           </div>
         </div>
 
@@ -1069,7 +1101,6 @@ Cara: German is so hard!</div>
         <div class="chips">
           <div class="chip">Topic: My home</div>
           <div class="chip">Type: Monologue</div>
-          <div class="chip">Audio: 1.2.m4a</div>
         </div>
 
         <div class="audio-box">
@@ -1082,15 +1113,7 @@ Cara: German is so hard!</div>
         <div class="tabs">
           <button class="tab-btn active" type="button" onclick="openTab('audio2', 'test')">Test</button>
           <button class="tab-btn" type="button" onclick="openTab('audio2', 'transcript')">Transcript</button>
-          <button
-            class="tab-btn"
-            type="button"
-            onclick="openTab('audio2', 'translation')"
-            data-kk="Аударма"
-            data-ru="Перевод"
-          >
-            Аударма
-          </button>
+          <button class="tab-btn" type="button" onclick="openTab('audio2', 'translation')" data-kk="Аударма" data-ru="Перевод">Аударма</button>
           <button class="tab-btn" type="button" onclick="openTab('audio2', 'vocabulary')">Vocabulary</button>
         </div>
 
@@ -1187,17 +1210,79 @@ Cara: German is so hard!</div>
           </div>
 
           <div class="answer-panel" id="answers-audio2">
-            <h4 data-kk="Жауаптар және түсіндірмелер" data-ru="Ответы и объяснения">Жауаптар және түсіндірмелер</h4>
-            <ul class="explanation-list">
-              <li><strong>1 — C.</strong> <span data-kk="Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады." data-ru="Говорящий говорит, что его любимая комната — гостиная.">Сөйлеуші өзінің сүйікті бөлмесі қонақ бөлме екенін айтады.</span></li>
-              <li><strong>2 — A.</strong> <span data-kk="Бөлме кішкентай, бірақ өте жайлы деп сипатталады." data-ru="Комната описывается как маленькая, но очень уютная.">Бөлме кішкентай, бірақ өте жайлы деп сипатталады.</span></li>
-              <li><strong>3 — D.</strong> <span data-kk="Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр." data-ru="В углу стоит маленькая книжная полка с книгами и растениями.">Бұрышта кітаптар мен өсімдіктері бар кішкентай кітап сөресі тұр.</span></li>
-              <li><strong>4 — B.</strong> <span data-kk="Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді." data-ru="По мнению говорящего, растения делают комнату красивой.">Сөйлеушінің ойынша, өсімдіктер бөлмені әдемі көрсетеді.</span></li>
-              <li><strong>5 — A.</strong> <span data-kk="Қонақ бөлмедегі ең жақсы нәрсе — диван." data-ru="Самая лучшая вещь в гостиной — диван.">Қонақ бөлмедегі ең жақсы нәрсе — диван.</span></li>
-              <li><strong>6 — C.</strong> <span data-kk="Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады." data-ru="Говорящий говорит, что обычно ставит на столик чай или свечи.">Сөйлеуші үстелге шайын немесе шамдар қоятынын айтады.</span></li>
-              <li><strong>7 — D.</strong> <span data-kk="Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды." data-ru="Когда говорящий один, он смотрит телевизор или читает книгу.">Жалғыз болғанда, ол теледидар көреді немесе кітап оқиды.</span></li>
-              <li><strong>8 — B.</strong> <span data-kk="Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек." data-ru="Главная мысль: гостиная должна быть удобной и расслабляющей.">Негізгі ой: қонақ бөлме жайлы және демалуға ыңғайлы болуы керек.</span></li>
-            </ul>
+            <h4 data-kk="Нәтиже және жауаптар" data-ru="Результат и ответы">Нәтиже және жауаптар</h4>
+
+            <div class="answer-item">
+              <strong>1. What is the speaker’s favourite room?</strong>
+              <small data-kk="Сөйлеушінің сүйікті бөлмесі қайсы?" data-ru="Какая любимая комната говорящего?">Сөйлеушінің сүйікті бөлмесі қайсы?</small>
+              <p><b>Correct answer: C</b></p>
+              <p><b>Answer:</b> The living room.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Қонақ бөлме." data-ru="Гостиная.">Қонақ бөлме.</span></p>
+              <p><b>Why:</b> <span data-kk="Мәтін “My favourite room is the living room” деп басталады." data-ru="Текст начинается словами: “My favourite room is the living room”.">Мәтін “My favourite room is the living room” деп басталады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>2. How does the speaker describe the room?</strong>
+              <small data-kk="Сөйлеуші бөлмені қалай сипаттайды?" data-ru="Как говорящий описывает комнату?">Сөйлеуші бөлмені қалай сипаттайды?</small>
+              <p><b>Correct answer: A</b></p>
+              <p><b>Answer:</b> Small but very cozy.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Кішкентай, бірақ өте жайлы." data-ru="Маленькая, но очень уютная.">Кішкентай, бірақ өте жайлы.</span></p>
+              <p><b>Why:</b> <span data-kk="Сөйлеуші бөлмені дәл осылай сипаттайды." data-ru="Говорящий описывает комнату именно так.">Сөйлеуші бөлмені дәл осылай сипаттайды.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>3. What is in the corner of the living room?</strong>
+              <small data-kk="Қонақ бөлменің бұрышында не бар?" data-ru="Что находится в углу гостиной?">Қонақ бөлменің бұрышында не бар?</small>
+              <p><b>Correct answer: D</b></p>
+              <p><b>Answer:</b> A small bookshelf with books and plants.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Кітаптар мен өсімдіктері бар кішкентай кітап сөресі." data-ru="Небольшая книжная полка с книгами и растениями.">Кітаптар мен өсімдіктері бар кішкентай кітап сөресі.</span></p>
+              <p><b>Why:</b> <span data-kk="Мәтінде бұрыштағы кітап сөресі айтылған." data-ru="В тексте говорится о книжной полке в углу.">Мәтінде бұрыштағы кітап сөресі айтылған.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>4. What does the speaker think plants do?</strong>
+              <small data-kk="Сөйлеушінің ойынша, өсімдіктер не істейді?" data-ru="Что, по мнению говорящего, делают растения?">Сөйлеушінің ойынша, өсімдіктер не істейді?</small>
+              <p><b>Correct answer: B</b></p>
+              <p><b>Answer:</b> They make the room look nice.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Олар бөлмені әдемі көрсетеді." data-ru="Они делают комнату красивой.">Олар бөлмені әдемі көрсетеді.</span></p>
+              <p><b>Why:</b> <span data-kk="Сөйлеуші өсімдіктер бөлмені әдемі көрсетеді дейді." data-ru="Говорящий говорит, что растения делают комнату красивой.">Сөйлеуші өсімдіктер бөлмені әдемі көрсетеді дейді.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>5. What is the best thing in the speaker’s living room?</strong>
+              <small data-kk="Қонақ бөлмедегі ең жақсы нәрсе не?" data-ru="Что самое лучшее в гостиной говорящего?">Қонақ бөлмедегі ең жақсы нәрсе не?</small>
+              <p><b>Correct answer: A</b></p>
+              <p><b>Answer:</b> The sofa.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Диван." data-ru="Диван.">Диван.</span></p>
+              <p><b>Why:</b> <span data-kk="Сөйлеуші ең жақсы нәрсе диван екенін айтады." data-ru="Говорящий говорит, что лучшая вещь — диван.">Сөйлеуші ең жақсы нәрсе диван екенін айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>6. What does the speaker usually put on the small table?</strong>
+              <small data-kk="Сөйлеуші кішкентай үстелге әдетте не қояды?" data-ru="Что говорящий обычно ставит на маленький столик?">Сөйлеуші кішкентай үстелге әдетте не қояды?</small>
+              <p><b>Correct answer: C</b></p>
+              <p><b>Answer:</b> Tea or some candles.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Шай немесе бірнеше шам." data-ru="Чай или несколько свечей.">Шай немесе бірнеше шам.</span></p>
+              <p><b>Why:</b> <span data-kk="Мәтінде үстелге шай немесе шам қоятыны айтылған." data-ru="В тексте сказано, что он ставит чай или свечи.">Мәтінде үстелге шай немесе шам қоятыны айтылған.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>7. What does the speaker do when alone?</strong>
+              <small data-kk="Сөйлеуші жалғыз болғанда не істейді?" data-ru="Что делает говорящий, когда он один?">Сөйлеуші жалғыз болғанда не істейді?</small>
+              <p><b>Correct answer: D</b></p>
+              <p><b>Answer:</b> Watches TV or reads a book.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Теледидар көреді немесе кітап оқиды." data-ru="Смотрит телевизор или читает книгу.">Теледидар көреді немесе кітап оқиды.</span></p>
+              <p><b>Why:</b> <span data-kk="Сөйлеуші жалғыз кезде осыны істейтінін айтады." data-ru="Говорящий говорит, что делает это, когда он один.">Сөйлеуші жалғыз кезде осыны істейтінін айтады.</span></p>
+            </div>
+
+            <div class="answer-item">
+              <strong>8. What is the speaker’s main idea about a living room?</strong>
+              <small data-kk="Сөйлеушінің қонақ бөлме туралы негізгі ойы қандай?" data-ru="Какая главная мысль говорящего о гостиной?">Сөйлеушінің қонақ бөлме туралы негізгі ойы қандай?</small>
+              <p><b>Correct answer: B</b></p>
+              <p><b>Answer:</b> It should be comfortable and relaxing.</p>
+              <p><b data-kk="Жауап аудармасы:" data-ru="Перевод ответа:">Жауап аудармасы:</b> <span data-kk="Ол жайлы және демалуға ыңғайлы болуы керек." data-ru="Она должна быть удобной и расслабляющей.">Ол жайлы және демалуға ыңғайлы болуы керек.</span></p>
+              <p><b>Why:</b> <span data-kk="Соңында сөйлеуші қонақ бөлме жайлы болуы керек дейді." data-ru="В конце говорящий говорит, что гостиная должна быть комфортной.">Соңында сөйлеуші қонақ бөлме жайлы болуы керек дейді.</span></p>
+            </div>
           </div>
         </div>
 
@@ -1211,7 +1296,7 @@ Cara: German is so hard!</div>
             data-kk="Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек."
             data-ru="Моя любимая комната — гостиная. Она маленькая, но очень уютная. Стены светлые, и на них есть несколько картин. В углу стоит небольшая книжная полка с книгами и растениями. Я думаю, растения делают комнату красивой. Самая лучшая вещь в моей гостиной — диван. Он большой и мягкий, с подушками и тёплым пледом перед ним. Там есть маленький столик. Обычно я ставлю на него чай или несколько свечей. Вечером я включаю маленькие огни. Они делают комнату тёплой и уютной. Я люблю эту комнату, потому что она хорошо подходит для отдыха. Когда я одна, я смотрю телевизор или читаю книгу. Когда приходят мои друзья, мы сидим на диване и разговариваем. Я думаю, гостиная должна быть удобной и расслабляющей. Она не обязана быть большой, и в ней не нужно много дорогих вещей. Это просто должно быть место, где ты чувствуешь себя счастливым и спокойным."
           >
-            Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы. Қабырғалары ашық түсті, және олардың үстінде бірнеше сурет бар. Бұрышта кітаптар мен өсімдіктер тұрған кішкентай кітап сөресі бар. Менің ойымша, өсімдіктер бөлмені әдемі көрсетеді. Қонақ бөлмемдегі ең жақсы нәрсе — диван. Ол үлкен әрі жұмсақ, үстінде бірнеше жастық және алдында жылы көрпе бар. Кішкентай үстел де бар. Мен әдетте оның үстіне шайымды немесе бірнеше шам қоямын. Кешке мен кішкентай шамдарды қосамын. Олар бөлмені жылы сезіндіреді. Мен бұл бөлмені жақсы көремін, өйткені ол демалуға ыңғайлы. Жалғыз болғанда, мен теледидар көремін немесе кітап оқимын. Достарым келгенде, біз диванда отырып сөйлесеміз. Менің ойымша, қонақ бөлме жайлы және тыныштандыратын болуы керек. Оның үлкен болуы міндетті емес және көп қымбат заттардың да қажеті жоқ. Ол жай ғана өзіңді бақытты әрі тыныш сезінетін орын болуы керек.
+            Менің сүйікті бөлмем — қонақ бөлме. Ол кішкентай, бірақ өте жайлы.
           </div>
         </div>
 
@@ -1261,7 +1346,6 @@ Cara: German is so hard!</div>
           panel.classList.toggle("active", panel.dataset.tabName === tabName);
         });
 
-        const card = document.querySelector(`#${group.replace("audio", "audio-")} `);
         const listeningCard = document.getElementById(group.replace("audio", "audio-"));
 
         if (listeningCard) {
@@ -1270,6 +1354,8 @@ Cara: German is so hard!</div>
             button.classList.toggle("active", onclick.includes(`'${tabName}'`));
           });
         }
+
+        setLanguage(currentLang);
       }
 
       function checkTest(testId) {
